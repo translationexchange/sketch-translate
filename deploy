@@ -1,0 +1,57 @@
+#!/usr/bin/env ruby
+
+def execute(cmd)
+  puts "\n***************************************************************************\n"
+  puts "$ #{cmd}"
+  system(cmd)
+end
+
+def version_file_path
+  './String Utility.sketchplugin/Contents/Sketch/manifest.json'
+end
+
+def version_file
+  @version_file ||= File.read(version_file_path)
+end
+
+def version
+  @version ||= version_file.match(/"version"\s*:\s*"([^"]*)"/)[1]
+end
+
+def increment_version
+  parts = version.split('.')
+  parts[2] = (parts[2].to_i + 1).to_s
+  new_version = parts.join('.')
+
+  version_file.gsub!(version, new_version)
+
+  File.open(version_file_path, 'w') do |file|
+    file.write(version_file)
+  end
+
+  @version_file = nil
+  @version = nil
+end
+
+puts "\nDeploying String Utility.sketchplugin (#{version})..."
+
+if ARGV.include?('release')
+  execute('git checkout master')
+  execute('git merge develop')
+  execute('git push')
+end
+
+if ARGV.include?('release')
+  execute("git tag #{version}")
+  execute('git push --tags')
+
+  execute('git checkout develop')
+
+  increment_version
+  execute("git add #{version_file_path}")
+  execute("git commit -m 'Updated version to #{version}'")
+  execute('git push')
+end
+
+
+
