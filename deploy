@@ -48,7 +48,7 @@ if ARGV.include?('release')
   execute('git checkout develop')
 
   increment_version
-  execute("git add #{version_file_path}")
+  execute("git add '#{version_file_path}'")
   execute("git commit -m 'Updated version to #{version}'")
   execute('git push')
 end
