@@ -1,7 +1,7 @@
 {
     "name" : "String Utility",
     "identifier" : "com.gopro.sketch.stringutility",
-    "version" : "0.0.2",
+    "version" : "0.0.3",
     "description" : "Sketch plugin that exports and imports strings in a specific format for translation.",
     "author" : "GoPro",
     "commands" : [
