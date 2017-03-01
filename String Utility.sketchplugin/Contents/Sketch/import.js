@@ -93,9 +93,7 @@ function onRun(context) {
 
   if (openPanel.runModal() == NSOKButton) {
     var url = openPanel.URLs().firstObject();
-
-    var jsonString = JSON.stringify(stringObjects, undefined, 2);
-
+    
     var string = NSString.stringWithContentsOfFile_encoding_error(url, NSUTF8StringEncoding, null);
 
     if (string) {

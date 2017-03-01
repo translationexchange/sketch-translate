@@ -1,5 +1,5 @@
 function onRun(context) {
-  var sketch = context.api()
+  var sketch = context.api();
 
   var document = sketch.selectedDocument;
   var pages = document.pages;
@@ -51,6 +51,21 @@ function onRun(context) {
     identifierComponents.push(unescape(layerObject.text.length()));
     identifierComponents.push(unescape(layerObject.text.substring(layerObject.text.length() - 2, layerObject.text.length())));
 
+    var attributes = NSMutableDictionary.alloc().init();
+    attributes.setObject_forKey(layerObject.layer.font(), NSFontAttributeName);
+
+    var sampleString = NSString.alloc().initWithString("a");
+    var sampleSize = sampleString.sizeWithAttributes(attributes);
+
+    var lineHeight = layerObject.layer.lineHeight();
+
+    if (lineHeight == 0) {
+      var layoutManager = layerObject.layer.createLayoutManager();
+      lineHeight = layerObject.layer.defaultLineHeight(layoutManager);
+    }
+
+    var maxChar = Math.floor((layerObject.layer.rect().size.width * layerObject.layer.rect().size.height) / (sampleSize.width * lineHeight));
+
     var stringObject = {};
     stringObject.seq_num = i + 1;
     stringObject.identifier = identifierComponents.join("/");
@@ -60,6 +75,9 @@ function onRun(context) {
     stringObject.note.fontName = unescape(layerObject.layer.font().displayName());
     stringObject.note.fontSize = layerObject.layer.fontSize();
     stringObject.note.textAlignment = layerObject.layer.textAlignment();
+    stringObject.note.lineHeight = lineHeight;
+    stringObject.note.maxChar = maxChar;
+    stringObject.note.maxLine = Math.floor(parseFloat(layerObject.layer.rect().size.height) / lineHeight);
     stringObject.note.size = {};
     stringObject.note.size.width = parseFloat(layerObject.layer.rect().size.width);
     stringObject.note.size.height = parseFloat(layerObject.layer.rect().size.height);

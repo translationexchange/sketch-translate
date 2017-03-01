@@ -8,14 +8,14 @@
     {
       "script" : "export.js",
       "handler" : "onRun",
-      "shortcut" : "alt shift e",
+      "shortcut" : "cmd ctrl e",
       "name" : "Export...",
       "identifier" : "export"
     },
     {
       "script" : "import.js",
       "handler" : "onRun",
-      "shortcut" : "alt shift i",
+      "shortcut" : "cmd ctrl i",
       "name" : "Import...",
       "identifier" : "import"
     }
