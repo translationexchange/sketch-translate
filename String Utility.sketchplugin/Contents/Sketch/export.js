@@ -16,24 +16,33 @@ function onRun(context) {
   for (var i = 0; i < layers.length; i++) {
     var layer = layers[i];
 
-    if (layer.class() === MSSymbolInstance) {
+    var layerName = unescape(layer.name());
+
+    if (layer.class() === MSSymbolInstance && layerName.startsWith("_") && layerName.endsWith("_")) {
       var instance = layer;
       var master = instance.symbolMaster();
+      var overrides = instance.overrides();
 
       var masterChildren = master.children();
 
       for (var j = 0; j < masterChildren.length; j++) {
         var layer = masterChildren[j];
 
-        if (layer.class() === MSTextLayer && layer.name().startsWith("*")) {
-          var text = layer.stringValue();
+        var layerName = unescape(layer.name());
 
-          var layerObject = {};
-          layerObject.symbolInstance = instance;
-          layerObject.layer = layer;
-          layerObject.text = text;
+        if (layer.class() === MSTextLayer && layerName.startsWith("*") && layerName.endsWith("_")) {
+          if (overrides) {
+            var textOverride = overrides.objectForKey(0).objectForKey(layer.objectID().toString());
 
-          layerObjects.push(layerObject);
+            if (textOverride) {
+              var layerObject = {};
+              layerObject.symbolInstance = instance;
+              layerObject.layer = layer;
+              layerObject.text = textOverride;
+
+              layerObjects.push(layerObject);
+            }
+          }
         }
       }
     }
