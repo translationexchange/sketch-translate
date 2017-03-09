@@ -1,15 +1,15 @@
 //
-//  MSLayerGroup.h
+//  MSModelObject.h
 //  StringUtility
 //
 //  Created by Konstantin Kabanov on 09/03/2017.
 //  Copyright © 2017 GoPro Inc. All rights reserved.
 //
 
-#import "MSStyledLayer.h"
+#import <Cocoa/Cocoa.h>
 
-@interface MSLayerGroup : MSStyledLayer
+@interface MSModelObject : NSObject
 
-- (MSLayer *)children;
+@property(copy, nonatomic) NSString *objectID;
 
 @end

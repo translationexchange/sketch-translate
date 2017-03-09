@@ -2,7 +2,7 @@
 
 function loadBundleIfRequired(context) {
     if (NSClassFromString("GPSketch") == null) {
-        runtime.loadBundle("StringUtilityPlugin.bundle");
+        runtime.loadBundle("StringUtility.bundle");
         [GPSketch setPluginContextDictionary:context];
     }
     try {
@@ -12,7 +12,7 @@ function loadBundleIfRequired(context) {
 
 function testPlugin(context) {
   loadBundleIfRequired(context);
-  [GPSketch exportOptions];
+  [GPSketch export];
 }
 
 function onRun(context) {

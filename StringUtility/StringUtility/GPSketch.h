@@ -11,6 +11,7 @@
 @interface GPSketch : NSObject
 
 + (void)setPluginContextDictionary:(NSDictionary *)context;
-+ (void)exportOptions;
++ (void)presentExportOptions;
++ (void)export;
 
 @end
