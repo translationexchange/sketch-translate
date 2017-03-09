@@ -18,6 +18,8 @@
 		AB8D28861E712DF40021D258 /* GPExportOptionsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8D28841E712DF40021D258 /* GPExportOptionsWindowController.m */; };
 		AB8D28871E712DF40021D258 /* GPExportOptionsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8D28851E712DF40021D258 /* GPExportOptionsWindowController.xib */; };
 		ABF2CB091E714CE90086E57F /* GPPluginConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2CB081E714CE90086E57F /* GPPluginConfiguration.m */; };
+		ABF2CB0B1E7186490086E57F /* StringUtilityPlugin.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = AB8D286F1E6EB6D20021D258 /* StringUtilityPlugin.bundle */; };
+		ABF2CB0E1E7192EF0086E57F /* GPSketch.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2CB0D1E7192EF0086E57F /* GPSketch.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +30,16 @@
 			dstSubfolderSpec = 13;
 			files = (
 				AB8D28821E6EB9620021D258 /* StringUtilityPlugin.bundle in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABF2CB0A1E71863A0086E57F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "/Users/konstantinkabanov/Repositories/sketch-translate/String Utility.sketchplugin/Contents/Resources";
+			dstSubfolderSpec = 0;
+			files = (
+				ABF2CB0B1E7186490086E57F /* StringUtilityPlugin.bundle in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +64,14 @@
 		AB8D28851E712DF40021D258 /* GPExportOptionsWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPExportOptionsWindowController.xib; sourceTree = "<group>"; };
 		ABF2CB071E714CE90086E57F /* GPPluginConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPluginConfiguration.h; sourceTree = "<group>"; };
 		ABF2CB081E714CE90086E57F /* GPPluginConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPluginConfiguration.m; sourceTree = "<group>"; };
+		ABF2CB0C1E7192EF0086E57F /* GPSketch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSketch.h; sourceTree = "<group>"; };
+		ABF2CB0D1E7192EF0086E57F /* GPSketch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSketch.m; sourceTree = "<group>"; };
+		ABF2D1241E71A0400086E57F /* MSDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MSDocument.h; sourceTree = "<group>"; };
+		ABF2D1251E71A0480086E57F /* MSPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSPage.h; sourceTree = "<group>"; };
+		ABF2D1261E71A0FC0086E57F /* MSLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSLayer.h; sourceTree = "<group>"; };
+		ABF2D7391E71A2840086E57F /* MSModelObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSModelObject.h; sourceTree = "<group>"; };
+		ABF2D73A1E71A3000086E57F /* MSLayerGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSLayerGroup.h; sourceTree = "<group>"; };
+		ABF2D73B1E71A3670086E57F /* MSStyledLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSStyledLayer.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +136,8 @@
 		AB8D28701E6EB6D20021D258 /* StringUtilityPlugin */ = {
 			isa = PBXGroup;
 			children = (
+				ABF2D1231E71A0370086E57F /* Sketch Headers */,
+				ABF2CB0F1E7192F30086E57F /* Sketch */,
 				ABF2CB031E714C9C0086E57F /* Plugin Configuration */,
 				AB8D28751E6EB6F90021D258 /* View Controllers */,
 				AB8D28711E6EB6D20021D258 /* Info.plist */,
@@ -153,6 +175,28 @@
 			name = "Plugin Configuration";
 			sourceTree = "<group>";
 		};
+		ABF2CB0F1E7192F30086E57F /* Sketch */ = {
+			isa = PBXGroup;
+			children = (
+				ABF2CB0C1E7192EF0086E57F /* GPSketch.h */,
+				ABF2CB0D1E7192EF0086E57F /* GPSketch.m */,
+			);
+			name = Sketch;
+			sourceTree = "<group>";
+		};
+		ABF2D1231E71A0370086E57F /* Sketch Headers */ = {
+			isa = PBXGroup;
+			children = (
+				ABF2D1241E71A0400086E57F /* MSDocument.h */,
+				ABF2D1251E71A0480086E57F /* MSPage.h */,
+				ABF2D73A1E71A3000086E57F /* MSLayerGroup.h */,
+				ABF2D73B1E71A3670086E57F /* MSStyledLayer.h */,
+				ABF2D1261E71A0FC0086E57F /* MSLayer.h */,
+				ABF2D7391E71A2840086E57F /* MSModelObject.h */,
+			);
+			name = "Sketch Headers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -181,6 +225,7 @@
 				AB8D286B1E6EB6D20021D258 /* Sources */,
 				AB8D286C1E6EB6D20021D258 /* Frameworks */,
 				AB8D286D1E6EB6D20021D258 /* Resources */,
+				ABF2CB0A1E71863A0086E57F /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -268,6 +313,7 @@
 			files = (
 				AB8D287D1E6EB7320021D258 /* GPSettingsWindowController.m in Sources */,
 				AB8D28861E712DF40021D258 /* GPExportOptionsWindowController.m in Sources */,
+				ABF2CB0E1E7192EF0086E57F /* GPSketch.m in Sources */,
 				ABF2CB091E714CE90086E57F /* GPPluginConfiguration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

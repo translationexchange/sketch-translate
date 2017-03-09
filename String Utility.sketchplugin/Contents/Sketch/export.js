@@ -1,3 +1,20 @@
+@import "lib/runtime.js"
+
+function loadBundleIfRequired(context) {
+    if (NSClassFromString("GPSketch") == null) {
+        runtime.loadBundle("StringUtilityPlugin.bundle");
+        [GPSketch setPluginContextDictionary:context];
+    }
+    try {
+        [GPSketch setPluginContextDictionary:context];
+    } catch (e) {}
+}
+
+function testPlugin(context) {
+  loadBundleIfRequired(context);
+  [GPSketch exportOptions];
+}
+
 function onRun(context) {
   var sketch = context.api();
 

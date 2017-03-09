@@ -13,6 +13,13 @@
       "identifier" : "export"
     },
     {
+      "script" : "export.js",
+      "handler" : "testPlugin",
+      "shortcut" : "cmd ctrl p",
+      "name" : "Export Options...",
+      "identifier" : "export-options"
+    },
+    {
       "script" : "import.js",
       "handler" : "onRun",
       "shortcut" : "cmd ctrl i",
