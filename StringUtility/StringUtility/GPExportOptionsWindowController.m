@@ -8,6 +8,7 @@
 
 #import "GPExportOptionsWindowController.h"
 
+#import "GPSketch.h"
 #import "GPPluginConfiguration.h"
 
 @interface GPExportOptionsWindowController () <NSTableViewDelegate, NSTableViewDataSource>
@@ -63,7 +64,7 @@
 }
 
 - (IBAction)cancelButtonAction:(id)sender {
-    [self close];
+    [self.window.sheetParent endSheet:self.window returnCode:NSModalResponseCancel];
 }
 
 - (IBAction)exportButtonAction:(id)sender {
@@ -77,7 +78,9 @@
     
     [[GPPluginConfiguration sharedConfiguration] save];
     
-    [self close];
+    [self.window.sheetParent endSheet:self.window returnCode:NSModalResponseOK];
+    
+    [GPSketch export];
 }
 
 @end

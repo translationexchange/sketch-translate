@@ -75,7 +75,7 @@
 		AB8D284E1E6EB6B90021D258 = {
 			isa = PBXGroup;
 			children = (
-				AB8D28701E6EB6D20021D258 /* StringUtilityPlugin */,
+				AB8D28701E6EB6D20021D258 /* StringUtility */,
 				AB8D28581E6EB6B90021D258 /* Products */,
 				AB8D287E1E6EB8150021D258 /* Frameworks */,
 			);
@@ -89,7 +89,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		AB8D28701E6EB6D20021D258 /* StringUtilityPlugin */ = {
+		AB8D28701E6EB6D20021D258 /* StringUtility */ = {
 			isa = PBXGroup;
 			children = (
 				ABF2D1231E71A0370086E57F /* Sketch Headers */,
@@ -98,7 +98,6 @@
 				AB8D28751E6EB6F90021D258 /* View Controllers */,
 				AB8D28711E6EB6D20021D258 /* Info.plist */,
 			);
-			name = StringUtilityPlugin;
 			path = StringUtility;
 			sourceTree = "<group>";
 		};

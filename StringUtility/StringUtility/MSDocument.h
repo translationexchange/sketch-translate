@@ -10,7 +10,7 @@
 
 #import "MSPage.h"
 
-@interface MSDocument : NSObject
+@interface MSDocument : NSDocument
 
 - (NSArray<MSPage *> *)pages;
 

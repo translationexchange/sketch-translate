@@ -16,7 +16,7 @@
 #import "GPExportOptionsWindowController.h"
 
 static NSDictionary *_context;
-static NSWindowController *_wc;
+static NSWindowController *_currentWindowController;
 
 @implementation GPSketch
 
@@ -24,10 +24,16 @@ static NSWindowController *_wc;
     _context = context;
 }
 
-+ (void)presentExportOptions {
-    GPExportOptionsWindowController *wc = [[GPExportOptionsWindowController alloc] init];
-    _wc = wc;
-    [wc showWindow:nil];
++ (void)presentExport {
+    MSDocument *document = _context[@"document"];
+    NSWindowController *documentWindowController = [document.windowControllers firstObject];
+    
+    GPExportOptionsWindowController *windowController = [[GPExportOptionsWindowController alloc] init];
+    _currentWindowController = windowController;
+    
+    [documentWindowController.window beginSheet:windowController.window completionHandler:^(NSModalResponse returnCode) {
+        _currentWindowController = nil;
+    }];
 }
 
 + (void)export {
@@ -35,6 +41,8 @@ static NSWindowController *_wc;
     NSMutableArray<MSLayer *> *layers = [@[] mutableCopy];
     
     MSDocument *document = _context[@"document"];
+    NSWindowController *documentWindowController = [document.windowControllers firstObject];
+    
     NSArray<MSPage *> *pages = document.pages;
     
     for (MSPage *page in pages) {
@@ -78,12 +86,14 @@ static NSWindowController *_wc;
     savePanel.allowedFileTypes = @[@"json"];
     savePanel.directoryURL = [NSURL fileURLWithPath:@"~/Documents/"];
     
-    if ([savePanel runModal] == NSModalResponseOK) {
-        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:stringInfos options:NSJSONWritingPrettyPrinted error:nil];
-        NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-        
-        [jsonString writeToURL:savePanel.URL atomically:true encoding:NSUTF8StringEncoding error:nil];
-    }
+    [documentWindowController.window beginSheet:savePanel completionHandler:^(NSModalResponse returnCode) {
+        if (returnCode == NSModalResponseOK) {
+            NSData *jsonData = [NSJSONSerialization dataWithJSONObject:stringInfos options:NSJSONWritingPrettyPrinted error:nil];
+            NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+            
+            [jsonString writeToURL:savePanel.URL atomically:true encoding:NSUTF8StringEncoding error:nil];
+        }
+    }];
 }
 
 @end

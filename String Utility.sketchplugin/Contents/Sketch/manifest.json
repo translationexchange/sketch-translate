@@ -6,18 +6,11 @@
     "author" : "GoPro Inc.",
     "commands" : [
     {
-      "script" : "export.js",
-      "handler" : "onRun",
+      "script" : "stringutility.js",
+      "handler" : "presentExport",
       "shortcut" : "cmd ctrl e",
       "name" : "Export...",
       "identifier" : "export"
-    },
-    {
-      "script" : "export.js",
-      "handler" : "testPlugin",
-      "shortcut" : "cmd ctrl p",
-      "name" : "Export Options...",
-      "identifier" : "export-options"
     },
     {
       "script" : "import.js",

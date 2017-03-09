@@ -8,6 +8,8 @@
 
 #import "GPOverridedLayerInfo.h"
 
+#import "GPPluginConfiguration.h"
+
 @implementation GPOverridedLayerInfo
 
 - (NSMutableDictionary *)dictionaryRepresentation {
@@ -43,18 +45,34 @@
     dictionary[@"info"] = infoDict;
     
     NSMutableDictionary *noteDict = [@{} mutableCopy];
-    noteDict[@"fontName"] = self.layer.font.displayName;
-    noteDict[@"fontSize"] = @(self.layer.fontSize);
-    noteDict[@"textAlignment"] = @(self.layer.textAlignment);
-    noteDict[@"lineHeight"] = @(lineHeight);
-    noteDict[@"maxChar"] = @(maxCharCount);
-    noteDict[@"maxLine"] = @(maxLineCount);
     
-    NSMutableDictionary *sizeDict = [@{} mutableCopy];
-    sizeDict[@"width"] = @(self.layer.rect.size.width);
-    sizeDict[@"height"] = @(self.layer.rect.size.height);
+    if ([GPPluginConfiguration sharedConfiguration].isFontTypeEnabled) {
+        noteDict[@"fontName"] = self.layer.font.displayName;
+    }
     
-    noteDict[@"size"] = sizeDict;
+    if ([GPPluginConfiguration sharedConfiguration].isFontSizeEnabled) {
+        noteDict[@"fontSize"] = @(self.layer.fontSize);
+    }
+    
+    if ([GPPluginConfiguration sharedConfiguration].isTextAlignmentEnabled) {
+        noteDict[@"textAlignment"] = @(self.layer.textAlignment);
+    }
+    
+    if ([GPPluginConfiguration sharedConfiguration].isMaxCharacterCountEnabled) {
+        noteDict[@"maxChar"] = @(maxCharCount);
+    }
+    
+    if ([GPPluginConfiguration sharedConfiguration].isMaxLineCountEnabled) {
+        noteDict[@"maxLine"] = @(maxLineCount);
+    }
+    
+    if ([GPPluginConfiguration sharedConfiguration].isTextFieldDimensionsEnabled) {
+        NSMutableDictionary *sizeDict = [@{} mutableCopy];
+        sizeDict[@"width"] = @(self.layer.rect.size.width);
+        sizeDict[@"height"] = @(self.layer.rect.size.height);
+        
+        noteDict[@"size"] = sizeDict;
+    }
     
     dictionary[@"note"] = noteDict;
     
