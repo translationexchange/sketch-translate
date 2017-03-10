@@ -13,8 +13,8 @@
       "identifier" : "export"
     },
     {
-      "script" : "import.js",
-      "handler" : "onRun",
+      "script" : "stringutility.js",
+      "handler" : "presentImport",
       "shortcut" : "cmd ctrl i",
       "name" : "Import...",
       "identifier" : "import"

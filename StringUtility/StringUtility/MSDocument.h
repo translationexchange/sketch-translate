@@ -12,8 +12,8 @@
 
 @interface MSDocument : NSDocument
 
-- (NSArray<MSPage *> *)pages;
+@property(retain, nonatomic) MSPage *currentPage;
 
-- (MSPage *)currentPage;
+- (NSArray<MSPage *> *)pages;
 
 @end
