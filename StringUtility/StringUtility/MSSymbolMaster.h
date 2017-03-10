@@ -6,8 +6,8 @@
 //  Copyright © 2017 GoPro Inc. All rights reserved.
 //
 
-#import "MSLayerGroup.h"
+#import "MSArtboardGroup.h"
 
-@interface MSSymbolMaster : MSLayerGroup
+@interface MSSymbolMaster : MSArtboardGroup
 
 @end

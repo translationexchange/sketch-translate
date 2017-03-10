@@ -79,8 +79,6 @@
     [[GPPluginConfiguration sharedConfiguration] save];
     
     [self.window.sheetParent endSheet:self.window returnCode:NSModalResponseOK];
-    
-    [GPSketch export];
 }
 
 @end

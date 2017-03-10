@@ -14,4 +14,6 @@
 
 - (NSArray<MSPage *> *)pages;
 
+- (MSPage *)currentPage;
+
 @end

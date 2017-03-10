@@ -8,11 +8,15 @@
 
 #import "MSModelObject.h"
 
+@class MSPage;
+
 @interface MSLayer : MSModelObject
 
 @property(nonatomic) CGPoint center;
 @property(nonatomic) CGPoint origin;
 @property(nonatomic) CGRect rect;
 @property(copy, nonatomic) NSString *name;
+
+- (MSPage *)parentPage;
 
 @end

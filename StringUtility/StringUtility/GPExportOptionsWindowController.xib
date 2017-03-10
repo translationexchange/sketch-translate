@@ -133,8 +133,8 @@
                         </scroller>
                     </scrollView>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lkS-qi-1R8">
-                        <rect key="frame" x="456" y="13" width="80" height="32"/>
-                        <buttonCell key="cell" type="push" title="Export" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rTv-Wl-Wue">
+                        <rect key="frame" x="467" y="13" width="69" height="32"/>
+                        <buttonCell key="cell" type="push" title="Next" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="rTv-Wl-Wue">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                             <string key="keyEquivalent" base64-UTF8="YES">
@@ -143,19 +143,6 @@ DQ
                         </buttonCell>
                         <connections>
                             <action selector="exportButtonAction:" target="-2" id="BLs-Ka-b2y"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="83K-u0-mJQ">
-                        <rect key="frame" x="14" y="13" width="82" height="32"/>
-                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eGC-05-BG7">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                            <string key="keyEquivalent" base64-UTF8="YES">
-Gw
-</string>
-                        </buttonCell>
-                        <connections>
-                            <action selector="cancelButtonAction:" target="-2" id="5cV-2h-RhH"/>
                         </connections>
                     </button>
                     <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wov-hi-Rih">
@@ -399,9 +386,23 @@ Gw
                             <autoresizingMask key="autoresizingMask"/>
                         </scroller>
                     </scrollView>
+                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="83K-u0-mJQ">
+                        <rect key="frame" x="385" y="13" width="82" height="32"/>
+                        <buttonCell key="cell" type="push" title="Cancel" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eGC-05-BG7">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="cancelButtonAction:" target="-2" id="5cV-2h-RhH"/>
+                        </connections>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="6oh-g6-yy3" firstAttribute="top" secondItem="BGH-MF-6dq" secondAttribute="bottom" constant="8" id="27p-pG-Y2s"/>
+                    <constraint firstItem="lkS-qi-1R8" firstAttribute="leading" secondItem="83K-u0-mJQ" secondAttribute="trailing" constant="12" id="2cb-tZ-CvQ"/>
                     <constraint firstAttribute="bottom" secondItem="83K-u0-mJQ" secondAttribute="bottom" constant="20" id="5yn-Dy-m4v"/>
                     <constraint firstItem="jL4-Wt-ePF" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="BRb-Om-NsA"/>
                     <constraint firstItem="BGH-MF-6dq" firstAttribute="top" secondItem="ZmO-3o-9ae" secondAttribute="bottom" constant="18" id="E7P-W6-tZ4"/>
@@ -417,7 +418,6 @@ Gw
                     <constraint firstItem="wov-hi-Rih" firstAttribute="top" secondItem="6oh-g6-yy3" secondAttribute="bottom" constant="18" id="m2E-b7-z2r"/>
                     <constraint firstItem="jL4-Wt-ePF" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="obb-a2-VDJ"/>
                     <constraint firstAttribute="trailing" secondItem="6oh-g6-yy3" secondAttribute="trailing" constant="20" id="uLH-rk-Rzl"/>
-                    <constraint firstItem="83K-u0-mJQ" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="wK4-bt-tSK"/>
                     <constraint firstItem="ZmO-3o-9ae" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="x6H-Az-OuI"/>
                     <constraint firstItem="wov-hi-Rih" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="xbT-OG-EsU"/>
                     <constraint firstItem="mJj-kb-MLU" firstAttribute="centerY" secondItem="ZmO-3o-9ae" secondAttribute="centerY" id="zba-sZ-ofj"/>

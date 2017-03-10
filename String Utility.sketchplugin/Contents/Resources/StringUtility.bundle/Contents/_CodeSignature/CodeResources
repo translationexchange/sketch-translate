@@ -6,11 +6,11 @@
 	<dict>
 		<key>Resources/GPExportOptionsWindowController.nib</key>
 		<data>
-		VgN5N/IECOamRWpo4MHqVn5+OFM=
+		zqDUri7xE8utASoKY5iLe/ESV+M=
 		</data>
-		<key>Resources/GPSettingsWindowController.nib</key>
+		<key>Resources/GPLanguagesWindowController.nib</key>
 		<data>
-		s+yCN4rYeeq4Va5WgyQvqqgjo0M=
+		UNlwA5BgQf1NGv/5iQLKuTHL8oo=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -19,14 +19,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jFpD35ZzQeM/qKSLAcVMkDLwhR1oKrf/SJXPDnsnQtI=
+			JVVOxIq/gOVjJjnEU/lxf7EEutXXf6SzwdMV/SNC3bs=
 			</data>
 		</dict>
-		<key>Resources/GPSettingsWindowController.nib</key>
+		<key>Resources/GPLanguagesWindowController.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lI9xpaIyTUubDrxzCcMyJ0RlL0NUz6QTI70ietHjX8Q=
+			cBJwdqNhfTJ2NzoVDuybVvwjCOz/7i0lXGM3pBor/Q4=
 			</data>
 		</dict>
 	</dict>

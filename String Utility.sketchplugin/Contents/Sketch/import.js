@@ -42,7 +42,7 @@ function layersForPages(pages) {
 }
 
 function findOverrideObjectWithIdentifier(layers, identifier) {
-  var identifierComponents = identifier.split("/");
+  var identifierComponents = identifier.split("-");
   var symbolName = identifierComponents[0];
   var layerName = identifierComponents[1];
   var first2Characters = identifierComponents[2];
@@ -100,6 +100,8 @@ function onRun(context) {
       stringObjects = JSON.parse(string.toString());
     }
   }
+
+  log(stringObjects);
 
   for (var i = 0; i < stringObjects.length; i++) {
     var stringObject = stringObjects[i];

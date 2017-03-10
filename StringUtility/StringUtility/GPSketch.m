@@ -13,7 +13,9 @@
 #import "MSTextLayer.h"
 #import "GPOverridedLayerInfo.h"
 
+#import "GPPluginConfiguration.h"
 #import "GPExportOptionsWindowController.h"
+#import "GPLanguagesWindowController.h"
 
 static NSDictionary *_context;
 static NSWindowController *_currentWindowController;
@@ -21,7 +23,7 @@ static NSWindowController *_currentWindowController;
 @implementation GPSketch
 
 + (void)setPluginContextDictionary:(NSDictionary *)context {
-    _context = context;
+    _context = [context copy];
 }
 
 + (void)presentExport {
@@ -33,6 +35,21 @@ static NSWindowController *_currentWindowController;
     
     [documentWindowController.window beginSheet:windowController.window completionHandler:^(NSModalResponse returnCode) {
         _currentWindowController = nil;
+        
+        if (returnCode == NSModalResponseOK) {
+            GPLanguagesWindowController *windowController = [[GPLanguagesWindowController alloc] init];
+            _currentWindowController = windowController;
+            
+            [documentWindowController.window beginSheet:windowController.window completionHandler:^(NSModalResponse returnCode) {
+                [windowController.window orderOut:nil];
+                
+                _currentWindowController = nil;
+                
+                if (returnCode == NSModalResponseOK) {
+                    [GPSketch export];
+                }
+            }];
+        }
     }];
 }
 
@@ -44,6 +61,14 @@ static NSWindowController *_currentWindowController;
     NSWindowController *documentWindowController = [document.windowControllers firstObject];
     
     NSArray<MSPage *> *pages = document.pages;
+    
+    if ([GPPluginConfiguration sharedConfiguration].findStringsInOption == 1) {
+        pages = [document valueForKeyPath:@"sidebarController.pageListViewController.dataController.delegate.selectedPages"];
+        
+        if (!pages) {
+            pages = @[document.currentPage];
+        }
+    }
     
     for (MSPage *page in pages) {
         [layers addObjectsFromArray:page.children];
@@ -86,8 +111,8 @@ static NSWindowController *_currentWindowController;
     savePanel.allowedFileTypes = @[@"json"];
     savePanel.directoryURL = [NSURL fileURLWithPath:@"~/Documents/"];
     
-    [documentWindowController.window beginSheet:savePanel completionHandler:^(NSModalResponse returnCode) {
-        if (returnCode == NSModalResponseOK) {
+    [savePanel beginSheetModalForWindow:documentWindowController.window completionHandler:^(NSInteger result) {
+        if (result == NSFileHandlingPanelOKButton) {
             NSData *jsonData = [NSJSONSerialization dataWithJSONObject:stringInfos options:NSJSONWritingPrettyPrinted error:nil];
             NSString *jsonString = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
             

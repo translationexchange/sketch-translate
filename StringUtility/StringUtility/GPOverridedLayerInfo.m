@@ -10,6 +10,8 @@
 
 #import "GPPluginConfiguration.h"
 
+#import "MSPage.h"
+
 @implementation GPOverridedLayerInfo
 
 - (NSMutableDictionary *)dictionaryRepresentation {
@@ -37,14 +39,20 @@
     NSInteger maxLineCount = (NSInteger)floorf(self.layer.rect.size.height / lineHeight);
     
     dictionary[@"seq_num"] = @0;
-    dictionary[@"identifier"] = [identifierComponents componentsJoinedByString:@"/"];
+    dictionary[@"identifier"] = [identifierComponents componentsJoinedByString:@"-"];
     
     NSMutableDictionary *infoDict = [@{} mutableCopy];
     infoDict[@"english"] = self.text;
     
+    for (NSString *localeIdentifier in [GPPluginConfiguration sharedConfiguration].localeIdentifiers) {
+        infoDict[localeIdentifier] = @"";
+    }
+    
     dictionary[@"info"] = infoDict;
     
     NSMutableDictionary *noteDict = [@{} mutableCopy];
+    
+    noteDict[@"pageName"] = self.symbolInstance.parentPage.name;
     
     if ([GPPluginConfiguration sharedConfiguration].isFontTypeEnabled) {
         noteDict[@"fontName"] = self.layer.font.displayName;

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB8D287A1E6EB7020021D258 /* GPSettingsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8D28781E6EB7020021D258 /* GPSettingsWindowController.xib */; };
-		AB8D287D1E6EB7320021D258 /* GPSettingsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8D287C1E6EB7320021D258 /* GPSettingsWindowController.m */; };
+		AB8D287A1E6EB7020021D258 /* GPLanguagesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8D28781E6EB7020021D258 /* GPLanguagesWindowController.xib */; };
+		AB8D287D1E6EB7320021D258 /* GPLanguagesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8D287C1E6EB7320021D258 /* GPLanguagesWindowController.m */; };
 		AB8D28801E6EB8150021D258 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8D287F1E6EB8150021D258 /* Cocoa.framework */; };
 		AB8D28861E712DF40021D258 /* GPExportOptionsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8D28841E712DF40021D258 /* GPExportOptionsWindowController.m */; };
 		AB8D28871E712DF40021D258 /* GPExportOptionsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8D28851E712DF40021D258 /* GPExportOptionsWindowController.xib */; };
@@ -34,13 +34,14 @@
 /* Begin PBXFileReference section */
 		AB8D286F1E6EB6D20021D258 /* StringUtility.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringUtility.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8D28711E6EB6D20021D258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AB8D28781E6EB7020021D258 /* GPSettingsWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPSettingsWindowController.xib; sourceTree = "<group>"; };
-		AB8D287B1E6EB7320021D258 /* GPSettingsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSettingsWindowController.h; sourceTree = "<group>"; };
-		AB8D287C1E6EB7320021D258 /* GPSettingsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPSettingsWindowController.m; sourceTree = "<group>"; };
+		AB8D28781E6EB7020021D258 /* GPLanguagesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPLanguagesWindowController.xib; sourceTree = "<group>"; };
+		AB8D287B1E6EB7320021D258 /* GPLanguagesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPLanguagesWindowController.h; sourceTree = "<group>"; };
+		AB8D287C1E6EB7320021D258 /* GPLanguagesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPLanguagesWindowController.m; sourceTree = "<group>"; };
 		AB8D287F1E6EB8150021D258 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		AB8D28831E712DF40021D258 /* GPExportOptionsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPExportOptionsWindowController.h; sourceTree = "<group>"; };
 		AB8D28841E712DF40021D258 /* GPExportOptionsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPExportOptionsWindowController.m; sourceTree = "<group>"; };
 		AB8D28851E712DF40021D258 /* GPExportOptionsWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPExportOptionsWindowController.xib; sourceTree = "<group>"; };
+		ABE9B9131E7258D600E55EB5 /* MSArtboardGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSArtboardGroup.h; sourceTree = "<group>"; };
 		ABF2CB071E714CE90086E57F /* GPPluginConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPluginConfiguration.h; sourceTree = "<group>"; };
 		ABF2CB081E714CE90086E57F /* GPPluginConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPluginConfiguration.m; sourceTree = "<group>"; };
 		ABF2CB0C1E7192EF0086E57F /* GPSketch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPSketch.h; sourceTree = "<group>"; };
@@ -104,9 +105,9 @@
 		AB8D28751E6EB6F90021D258 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AB8D287B1E6EB7320021D258 /* GPSettingsWindowController.h */,
-				AB8D287C1E6EB7320021D258 /* GPSettingsWindowController.m */,
-				AB8D28781E6EB7020021D258 /* GPSettingsWindowController.xib */,
+				AB8D287B1E6EB7320021D258 /* GPLanguagesWindowController.h */,
+				AB8D287C1E6EB7320021D258 /* GPLanguagesWindowController.m */,
+				AB8D28781E6EB7020021D258 /* GPLanguagesWindowController.xib */,
 				AB8D28831E712DF40021D258 /* GPExportOptionsWindowController.h */,
 				AB8D28841E712DF40021D258 /* GPExportOptionsWindowController.m */,
 				AB8D28851E712DF40021D258 /* GPExportOptionsWindowController.xib */,
@@ -150,6 +151,7 @@
 				ABF2D1241E71A0400086E57F /* MSDocument.h */,
 				ABF2D1251E71A0480086E57F /* MSPage.h */,
 				ABF2D73E1E71AA8D0086E57F /* MSSymbolMaster.h */,
+				ABE9B9131E7258D600E55EB5 /* MSArtboardGroup.h */,
 				ABF2D73A1E71A3000086E57F /* MSLayerGroup.h */,
 				ABF2D73C1E71A5EC0086E57F /* MSTextLayer.h */,
 				ABF2D73D1E71A9710086E57F /* MSSymbolInstance.h */,
@@ -220,7 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB8D287A1E6EB7020021D258 /* GPSettingsWindowController.xib in Resources */,
+				AB8D287A1E6EB7020021D258 /* GPLanguagesWindowController.xib in Resources */,
 				AB8D28871E712DF40021D258 /* GPExportOptionsWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -232,7 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB8D287D1E6EB7320021D258 /* GPSettingsWindowController.m in Sources */,
+				AB8D287D1E6EB7320021D258 /* GPLanguagesWindowController.m in Sources */,
 				ABF2D7451E71B0690086E57F /* GPOverridedLayerInfo.m in Sources */,
 				AB8D28861E712DF40021D258 /* GPExportOptionsWindowController.m in Sources */,
 				ABF2CB0E1E7192EF0086E57F /* GPSketch.m in Sources */,
