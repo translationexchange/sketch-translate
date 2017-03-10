@@ -8,7 +8,7 @@
 
 #import "MSModelObject.h"
 
-@class MSPage;
+@class MSPage, MSArtboardGroup;
 
 @interface MSLayer : MSModelObject
 
@@ -18,5 +18,6 @@
 @property(copy, nonatomic) NSString *name;
 
 - (MSPage *)parentPage;
+- (MSArtboardGroup *)parentArtboard;
 
 @end

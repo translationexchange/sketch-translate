@@ -11,6 +11,7 @@
 #import "GPPluginConfiguration.h"
 
 #import "MSPage.h"
+#import "MSArtboardGroup.h"
 
 @implementation GPOverridedLayerInfo
 
@@ -53,6 +54,7 @@
     NSMutableDictionary *noteDict = [@{} mutableCopy];
     
     noteDict[@"pageName"] = self.symbolInstance.parentPage.name;
+    noteDict[@"artboardName"] = self.symbolInstance.parentArtboard.name;
     
     if ([GPPluginConfiguration sharedConfiguration].isFontTypeEnabled) {
         noteDict[@"fontName"] = self.layer.font.displayName;
