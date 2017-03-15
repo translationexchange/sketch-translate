@@ -32,7 +32,7 @@ static NSWindowController *_currentWindowController;
     MSDocument *document = _context[@"document"];
     NSArray *pages = document.pages;
     
-    NSArray *originPages = [pages filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"NOT (name CONTAINS[cd] %@)", @": "]];
+    NSArray *originPages = [pages filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"NOT (name CONTAINS[cd] %@) AND (name != %@)", @": ", @"Symbols"]];
     
     if ([language isEqualToString:@"english"]) {
         return originPages;
@@ -40,12 +40,14 @@ static NSWindowController *_currentWindowController;
     
     NSMutableArray *pagesForLanguage = [[pages filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"name ENDSWITH %@", [NSString stringWithFormat:@": %@", language]]] mutableCopy];
     
-    if ([pagesForLanguage count] == 0) {
-        for (MSPage *originPage in originPages) {
+    for (MSPage *originPage in originPages) {
+        NSString *pageName = [NSString stringWithFormat:@"%@: %@", originPage.name, language];
+        
+        if ([[pagesForLanguage filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"name == %@", pageName]] count] == 0) {
             MSPage *pageForLanguage = [originPage copy];
-            pageForLanguage.name = [NSString stringWithFormat:@"%@: %@", pageForLanguage.name, language];
+            pageForLanguage.name = pageName;
             
-            NSObject *documentData = [document valueForKeyPath:@"documentData"];
+            id documentData = [document valueForKeyPath:@"documentData"];
             [documentData performSelector:@selector(addPage:) withObject:pageForLanguage];
             
             [pagesForLanguage addObject:pageForLanguage];
