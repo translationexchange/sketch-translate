@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28940845653A1180AAFBD347 /* libPods-StringUtility.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E017E36AEF108890D779C1D4 /* libPods-StringUtility.a */; };
 		AB8D287A1E6EB7020021D258 /* GPLanguagesWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8D28781E6EB7020021D258 /* GPLanguagesWindowController.xib */; };
 		AB8D287D1E6EB7320021D258 /* GPLanguagesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8D287C1E6EB7320021D258 /* GPLanguagesWindowController.m */; };
 		AB8D28801E6EB8150021D258 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8D287F1E6EB8150021D258 /* Cocoa.framework */; };
 		AB8D28861E712DF40021D258 /* GPExportOptionsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8D28841E712DF40021D258 /* GPExportOptionsWindowController.m */; };
 		AB8D28871E712DF40021D258 /* GPExportOptionsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8D28851E712DF40021D258 /* GPExportOptionsWindowController.xib */; };
+		ABACF3891E826AEF000CF29E /* GPStandardImportService.m in Sources */ = {isa = PBXBuildFile; fileRef = ABACF3881E826AEF000CF29E /* GPStandardImportService.m */; };
+		ABACF38C1E826B26000CF29E /* GPTranslationExchangeImportService.m in Sources */ = {isa = PBXBuildFile; fileRef = ABACF38B1E826B26000CF29E /* GPTranslationExchangeImportService.m */; };
+		ABACF3921E826B7E000CF29E /* GPStandardExportService.m in Sources */ = {isa = PBXBuildFile; fileRef = ABACF3911E826B7E000CF29E /* GPStandardExportService.m */; };
+		ABACF3951E826BAF000CF29E /* GPTranslationExchangeExportService.m in Sources */ = {isa = PBXBuildFile; fileRef = ABACF3941E826BAF000CF29E /* GPTranslationExchangeExportService.m */; };
+		ABACF3971E826C92000CF29E /* GPService.m in Sources */ = {isa = PBXBuildFile; fileRef = ABACF3961E826C92000CF29E /* GPService.m */; };
 		ABF2CB091E714CE90086E57F /* GPPluginConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2CB081E714CE90086E57F /* GPPluginConfiguration.m */; };
 		ABF2CB0B1E7186490086E57F /* StringUtility.bundle in CopyFiles */ = {isa = PBXBuildFile; fileRef = AB8D286F1E6EB6D20021D258 /* StringUtility.bundle */; };
 		ABF2CB0E1E7192EF0086E57F /* GPSketch.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2CB0D1E7192EF0086E57F /* GPSketch.m */; };
 		ABF2D7451E71B0690086E57F /* GPOverridedLayerInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF2D7441E71B0690086E57F /* GPOverridedLayerInfo.m */; };
+		ABF365F21E8103EF00238FEC /* GPAuthorizationWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF365F11E8103EF00238FEC /* GPAuthorizationWindowController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +39,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5C8B6D82B72F7214563E8387 /* Pods-StringUtility.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StringUtility.release.xcconfig"; path = "Pods/Target Support Files/Pods-StringUtility/Pods-StringUtility.release.xcconfig"; sourceTree = "<group>"; };
+		61059AEBF27C774791207467 /* Pods-StringUtility.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StringUtility.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StringUtility/Pods-StringUtility.debug.xcconfig"; sourceTree = "<group>"; };
+		AB4948FD1E82934D001115B1 /* MSKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSKit.h; sourceTree = "<group>"; };
 		AB8D286F1E6EB6D20021D258 /* StringUtility.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StringUtility.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8D28711E6EB6D20021D258 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AB8D28781E6EB7020021D258 /* GPLanguagesWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPLanguagesWindowController.xib; sourceTree = "<group>"; };
@@ -41,6 +51,16 @@
 		AB8D28831E712DF40021D258 /* GPExportOptionsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPExportOptionsWindowController.h; sourceTree = "<group>"; };
 		AB8D28841E712DF40021D258 /* GPExportOptionsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPExportOptionsWindowController.m; sourceTree = "<group>"; };
 		AB8D28851E712DF40021D258 /* GPExportOptionsWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPExportOptionsWindowController.xib; sourceTree = "<group>"; };
+		ABACF37F1E8269F0000CF29E /* GPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPService.h; sourceTree = "<group>"; };
+		ABACF3871E826AEF000CF29E /* GPStandardImportService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPStandardImportService.h; sourceTree = "<group>"; };
+		ABACF3881E826AEF000CF29E /* GPStandardImportService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPStandardImportService.m; sourceTree = "<group>"; };
+		ABACF38A1E826B26000CF29E /* GPTranslationExchangeImportService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTranslationExchangeImportService.h; sourceTree = "<group>"; };
+		ABACF38B1E826B26000CF29E /* GPTranslationExchangeImportService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTranslationExchangeImportService.m; sourceTree = "<group>"; };
+		ABACF3901E826B7E000CF29E /* GPStandardExportService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPStandardExportService.h; sourceTree = "<group>"; };
+		ABACF3911E826B7E000CF29E /* GPStandardExportService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPStandardExportService.m; sourceTree = "<group>"; };
+		ABACF3931E826BAF000CF29E /* GPTranslationExchangeExportService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPTranslationExchangeExportService.h; sourceTree = "<group>"; };
+		ABACF3941E826BAF000CF29E /* GPTranslationExchangeExportService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPTranslationExchangeExportService.m; sourceTree = "<group>"; };
+		ABACF3961E826C92000CF29E /* GPService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPService.m; sourceTree = "<group>"; };
 		ABE9B9131E7258D600E55EB5 /* MSArtboardGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSArtboardGroup.h; sourceTree = "<group>"; };
 		ABF2CB071E714CE90086E57F /* GPPluginConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPPluginConfiguration.h; sourceTree = "<group>"; };
 		ABF2CB081E714CE90086E57F /* GPPluginConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPPluginConfiguration.m; sourceTree = "<group>"; };
@@ -56,9 +76,11 @@
 		ABF2D73D1E71A9710086E57F /* MSSymbolInstance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSSymbolInstance.h; sourceTree = "<group>"; };
 		ABF2D73E1E71AA8D0086E57F /* MSSymbolMaster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSSymbolMaster.h; sourceTree = "<group>"; };
 		ABF2D73F1E71AE720086E57F /* Sketch.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Sketch.app; path = ../../../../../Applications/Sketch.app; sourceTree = "<group>"; };
-		ABF2D7411E71AEF30086E57F /* Sketch */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; name = Sketch; path = ../../../Desktop/Sketch; sourceTree = "<group>"; };
 		ABF2D7431E71B0690086E57F /* GPOverridedLayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPOverridedLayerInfo.h; sourceTree = "<group>"; };
 		ABF2D7441E71B0690086E57F /* GPOverridedLayerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPOverridedLayerInfo.m; sourceTree = "<group>"; };
+		ABF365F01E8103EF00238FEC /* GPAuthorizationWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAuthorizationWindowController.h; sourceTree = "<group>"; };
+		ABF365F11E8103EF00238FEC /* GPAuthorizationWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPAuthorizationWindowController.m; sourceTree = "<group>"; };
+		E017E36AEF108890D779C1D4 /* libPods-StringUtility.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StringUtility.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,18 +89,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB8D28801E6EB8150021D258 /* Cocoa.framework in Frameworks */,
+				28940845653A1180AAFBD347 /* libPods-StringUtility.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AB4948FE1E82945C001115B1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				ABF2D7431E71B0690086E57F /* GPOverridedLayerInfo.h */,
+				ABF2D7441E71B0690086E57F /* GPOverridedLayerInfo.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
 		AB8D284E1E6EB6B90021D258 = {
 			isa = PBXGroup;
 			children = (
 				AB8D28701E6EB6D20021D258 /* StringUtility */,
 				AB8D28581E6EB6B90021D258 /* Products */,
 				AB8D287E1E6EB8150021D258 /* Frameworks */,
+				C2E0BFF7DFE5C6749524999C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +128,8 @@
 			children = (
 				ABF2D1231E71A0370086E57F /* Sketch Headers */,
 				ABF2CB0F1E7192F30086E57F /* Sketch */,
+				AB4948FE1E82945C001115B1 /* Helpers */,
+				ABACF3851E826A1C000CF29E /* Services */,
 				ABF2CB031E714C9C0086E57F /* Plugin Configuration */,
 				AB8D28751E6EB6F90021D258 /* View Controllers */,
 				AB8D28711E6EB6D20021D258 /* Info.plist */,
@@ -111,6 +146,8 @@
 				AB8D28831E712DF40021D258 /* GPExportOptionsWindowController.h */,
 				AB8D28841E712DF40021D258 /* GPExportOptionsWindowController.m */,
 				AB8D28851E712DF40021D258 /* GPExportOptionsWindowController.xib */,
+				ABF365F01E8103EF00238FEC /* GPAuthorizationWindowController.h */,
+				ABF365F11E8103EF00238FEC /* GPAuthorizationWindowController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -118,11 +155,28 @@
 		AB8D287E1E6EB8150021D258 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ABF2D7411E71AEF30086E57F /* Sketch */,
 				ABF2D73F1E71AE720086E57F /* Sketch.app */,
 				AB8D287F1E6EB8150021D258 /* Cocoa.framework */,
+				E017E36AEF108890D779C1D4 /* libPods-StringUtility.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ABACF3851E826A1C000CF29E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ABACF37F1E8269F0000CF29E /* GPService.h */,
+				ABACF3961E826C92000CF29E /* GPService.m */,
+				ABACF3871E826AEF000CF29E /* GPStandardImportService.h */,
+				ABACF3881E826AEF000CF29E /* GPStandardImportService.m */,
+				ABACF3901E826B7E000CF29E /* GPStandardExportService.h */,
+				ABACF3911E826B7E000CF29E /* GPStandardExportService.m */,
+				ABACF38A1E826B26000CF29E /* GPTranslationExchangeImportService.h */,
+				ABACF38B1E826B26000CF29E /* GPTranslationExchangeImportService.m */,
+				ABACF3931E826BAF000CF29E /* GPTranslationExchangeExportService.h */,
+				ABACF3941E826BAF000CF29E /* GPTranslationExchangeExportService.m */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		ABF2CB031E714C9C0086E57F /* Plugin Configuration */ = {
@@ -139,8 +193,6 @@
 			children = (
 				ABF2CB0C1E7192EF0086E57F /* GPSketch.h */,
 				ABF2CB0D1E7192EF0086E57F /* GPSketch.m */,
-				ABF2D7431E71B0690086E57F /* GPOverridedLayerInfo.h */,
-				ABF2D7441E71B0690086E57F /* GPOverridedLayerInfo.m */,
 			);
 			name = Sketch;
 			sourceTree = "<group>";
@@ -158,8 +210,18 @@
 				ABF2D73B1E71A3670086E57F /* MSStyledLayer.h */,
 				ABF2D1261E71A0FC0086E57F /* MSLayer.h */,
 				ABF2D7391E71A2840086E57F /* MSModelObject.h */,
+				AB4948FD1E82934D001115B1 /* MSKit.h */,
 			);
 			name = "Sketch Headers";
+			sourceTree = "<group>";
+		};
+		C2E0BFF7DFE5C6749524999C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				61059AEBF27C774791207467 /* Pods-StringUtility.debug.xcconfig */,
+				5C8B6D82B72F7214563E8387 /* Pods-StringUtility.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,10 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AB8D28721E6EB6D20021D258 /* Build configuration list for PBXNativeTarget "StringUtility" */;
 			buildPhases = (
+				ED5AB94B3AD895CE5B05B220 /* [CP] Check Pods Manifest.lock */,
 				AB8D286B1E6EB6D20021D258 /* Sources */,
 				AB8D286C1E6EB6D20021D258 /* Frameworks */,
 				AB8D286D1E6EB6D20021D258 /* Resources */,
 				ABF2CB0A1E71863A0086E57F /* CopyFiles */,
+				A175D2772B1DB97085EC4430 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -229,16 +293,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		A175D2772B1DB97085EC4430 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StringUtility/Pods-StringUtility-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED5AB94B3AD895CE5B05B220 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AB8D286B1E6EB6D20021D258 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABACF3891E826AEF000CF29E /* GPStandardImportService.m in Sources */,
+				ABACF3971E826C92000CF29E /* GPService.m in Sources */,
+				ABF365F21E8103EF00238FEC /* GPAuthorizationWindowController.m in Sources */,
 				AB8D287D1E6EB7320021D258 /* GPLanguagesWindowController.m in Sources */,
 				ABF2D7451E71B0690086E57F /* GPOverridedLayerInfo.m in Sources */,
+				ABACF3921E826B7E000CF29E /* GPStandardExportService.m in Sources */,
+				ABACF38C1E826B26000CF29E /* GPTranslationExchangeImportService.m in Sources */,
 				AB8D28861E712DF40021D258 /* GPExportOptionsWindowController.m in Sources */,
 				ABF2CB0E1E7192EF0086E57F /* GPSketch.m in Sources */,
 				ABF2CB091E714CE90086E57F /* GPPluginConfiguration.m in Sources */,
+				ABACF3951E826BAF000CF29E /* GPTranslationExchangeExportService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +437,7 @@
 		};
 		AB8D28731E6EB6D20021D258 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61059AEBF27C774791207467 /* Pods-StringUtility.debug.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SHZ47SPEXT;
@@ -348,6 +452,7 @@
 		};
 		AB8D28741E6EB6D20021D258 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C8B6D82B72F7214563E8387 /* Pods-StringUtility.release.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = SHZ47SPEXT;

@@ -1,0 +1,33 @@
+PODS:
+  - NVHTarGzip (1.0.1)
+  - SAMKeychain (1.5.2)
+  - SSZipArchive (1.6.2)
+  - TMLKit (2.0.0):
+    - NVHTarGzip
+    - SAMKeychain
+    - SSZipArchive
+
+DEPENDENCIES:
+  - NVHTarGzip (from `https://github.com/konkab/NVHTarGzip`)
+  - TMLKit (from `/Users/konstantinkabanov/Repositories/tml-objc`)
+
+EXTERNAL SOURCES:
+  NVHTarGzip:
+    :git: https://github.com/konkab/NVHTarGzip
+  TMLKit:
+    :path: /Users/konstantinkabanov/Repositories/tml-objc
+
+CHECKOUT OPTIONS:
+  NVHTarGzip:
+    :commit: f9cf242ddce364b392473cb07f2d7d01feb6eb30
+    :git: https://github.com/konkab/NVHTarGzip
+
+SPEC CHECKSUMS:
+  NVHTarGzip: 58be2f2d412403c7896148481015971ddda424b9
+  SAMKeychain: 1865333198217411f35327e8da61b43de79b635b
+  SSZipArchive: 428eb1ac8d37dd133404d30f422b23958c1f9acc
+  TMLKit: 30eeb70b9213f2626f0cfa32b2e721ef791c0833
+
+PODFILE CHECKSUM: d2771f2c8f5efbea090f389480fb3ca5cce12666
+
+COCOAPODS: 1.2.0

@@ -12,6 +12,6 @@
 
 + (void)setPluginContextDictionary:(NSDictionary *)context;
 + (void)presentExport;
-+ (void)export;
++ (void)presentImport;
 
 @end

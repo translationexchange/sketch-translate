@@ -6,11 +6,28 @@
 	<dict>
 		<key>Resources/GPExportOptionsWindowController.nib</key>
 		<data>
-		KYqTSG/uo6gDbjAw9vBIsiOzrBM=
+		zqDUri7xE8utASoKY5iLe/ESV+M=
 		</data>
 		<key>Resources/GPLanguagesWindowController.nib</key>
 		<data>
 		UNlwA5BgQf1NGv/5iQLKuTHL8oo=
+		</data>
+		<key>Resources/SAMKeychain.bundle/en.lproj/SAMKeychain.strings</key>
+		<dict>
+			<key>hash</key>
+			<data>
+			LlihTO/vSkU4IatcWawJIL8z1Pc=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/en-US.json</key>
+		<data>
+		05VxI+li2AByV8BknPy74fH40fc=
+		</data>
+		<key>Resources/en.json</key>
+		<data>
+		2Kg3xdkSyoxjdhOmVwQIvq9Kb68=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -19,7 +36,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WpQo89g6kIkI24GzG596U9fQ9XWzKzJR5NFvLiwmC+s=
+			JVVOxIq/gOVjJjnEU/lxf7EEutXXf6SzwdMV/SNC3bs=
 			</data>
 		</dict>
 		<key>Resources/GPLanguagesWindowController.nib</key>
@@ -27,6 +44,29 @@
 			<key>hash2</key>
 			<data>
 			cBJwdqNhfTJ2NzoVDuybVvwjCOz/7i0lXGM3pBor/Q4=
+			</data>
+		</dict>
+		<key>Resources/SAMKeychain.bundle/en.lproj/SAMKeychain.strings</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			SO23YR2zpjwSvKBtZP5bzkFnodS9j56NVtmrtL7iy0A=
+			</data>
+			<key>optional</key>
+			<true/>
+		</dict>
+		<key>Resources/en-US.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			AOOaduruQtUu1uEAFAITeTYvUucG5XDE94cq2eUtwJg=
+			</data>
+		</dict>
+		<key>Resources/en.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			7j+bkJ1YM1VeaOyZHjsPhxRDcF49WTgYzQYgH4kSILc=
 			</data>
 		</dict>
 	</dict>

@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "132A48B6CC1132D1378D812A11BD8AFC9323E3DA",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "132A48B6CC1132D1378D812A11BD8AFC9323E3DA" : 9223372036854775807,
+    "99B6B8D127C7E87753F5F66F72C80311FF7C465B" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BF4166C6-E31A-4B3A-A143-208CF025F308",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "132A48B6CC1132D1378D812A11BD8AFC9323E3DA" : "sketch-translate\/",
+    "99B6B8D127C7E87753F5F66F72C80311FF7C465B" : "tml-objc\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "StringUtility",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "StringUtility\/StringUtility.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/translationexchange\/sketch-translate.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "132A48B6CC1132D1378D812A11BD8AFC9323E3DA"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/konkab\/tml-objc.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "99B6B8D127C7E87753F5F66F72C80311FF7C465B"
+    }
+  ]
+}

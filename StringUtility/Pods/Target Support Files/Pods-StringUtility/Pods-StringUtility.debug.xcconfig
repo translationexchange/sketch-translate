@@ -1,0 +1,8 @@
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/NVHTarGzip" "${PODS_ROOT}/Headers/Public/SAMKeychain" "${PODS_ROOT}/Headers/Public/SSZipArchive" "${PODS_ROOT}/Headers/Public/TMLKit"
+LIBRARY_SEARCH_PATHS = $(inherited) "$PODS_CONFIGURATION_BUILD_DIR/NVHTarGzip" "$PODS_CONFIGURATION_BUILD_DIR/SAMKeychain" "$PODS_CONFIGURATION_BUILD_DIR/SSZipArchive" "$PODS_CONFIGURATION_BUILD_DIR/TMLKit"
+OTHER_CFLAGS = $(inherited) -isystem "${PODS_ROOT}/Headers/Public" -isystem "${PODS_ROOT}/Headers/Public/NVHTarGzip" -isystem "${PODS_ROOT}/Headers/Public/SAMKeychain" -isystem "${PODS_ROOT}/Headers/Public/SSZipArchive" -isystem "${PODS_ROOT}/Headers/Public/TMLKit"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"NVHTarGzip" -l"SAMKeychain" -l"SSZipArchive" -l"TMLKit" -l"z" -framework "Foundation" -framework "Security"
+PODS_BUILD_DIR = $BUILD_DIR
+PODS_CONFIGURATION_BUILD_DIR = $PODS_BUILD_DIR/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_ROOT = ${SRCROOT}/Pods
