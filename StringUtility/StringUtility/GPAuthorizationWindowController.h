@@ -17,8 +17,6 @@
 
 @property (strong, nonatomic) TMLConfiguration *configuration;
 
-- (instancetype)initWithConfiguration:(TMLConfiguration *)configuration;
-
 - (void)authorize;
 - (void)deauthorize;
 

@@ -7,15 +7,11 @@
 //
 
 #import "GPTranslationExchangeExportService.h"
-
-#import "MSDocument.h"
-#import "MSPage.h"
-#import "MSSymbolInstance.h"
-#import "MSTextLayer.h"
-#import "GPOverridedLayerInfo.h"
-
-#import <TMLKit.h>
 #import "GPAuthorizationWindowController.h"
+#import "GPProjectsWindowController.h"
+
+#import "MSKit.h"
+#import <TMLKit.h>
 
 @interface GPTranslationExchangeExportService () <GPAuthorizationWindowControllerDelegate>
 
@@ -30,14 +26,27 @@
     [TML sharedInstanceWithConfiguration:configuration];
     
     if ([TML sharedInstance].configuration.accessToken.length == 0) {
-        GPAuthorizationWindowController *authController = [[GPAuthorizationWindowController alloc] initWithConfiguration:configuration];
-        
-        authController.delegate = self;
-        [authController authorize];
-        
-        [authController showWindow:nil];
-        _currentWindowController = authController;
+        [self acquireAccessToken];
+    } else {
+        [self showProjects];
     }
+}
+
+- (void)acquireAccessToken {
+    GPAuthorizationWindowController *authController = [[GPAuthorizationWindowController alloc] init];
+    
+    authController.delegate = self;
+    [authController authorize];
+    
+    [authController showWindow:nil];
+    _currentWindowController = authController;
+}
+
+- (void)showProjects {
+    GPProjectsWindowController *wc = [[GPProjectsWindowController alloc] init];
+    _currentWindowController = wc;
+    
+    [wc showWindow:nil];
 }
 
 - (void)authorizationWindowController:(GPAuthorizationWindowController *)controller didGrantAuthorization:(NSDictionary *)userInfo {
@@ -50,18 +59,20 @@
     [TML sharedInstance].configuration.accessToken = accessToken;
     [TML sharedInstance].currentUser = userInfo[TMLAuthorizationUserKey];
     
-    [controller.window close];
+    [controller close];
+    
+    [self showProjects];
 }
 
 - (void)authorizationWindowController:(GPAuthorizationWindowController *)controller didFailToAuthorize:(NSError *)error {
-    [controller.window close];
+    [controller close];
 }
 
 - (void)authorizationWindowControllerDidRevokeAuthorization:(GPAuthorizationWindowController *)controller {
     [TML sharedInstance].configuration.accessToken = nil;
     [TML sharedInstance].currentUser = nil;
     
-    [controller.window close];
+    [controller close];
 }
 
 @end

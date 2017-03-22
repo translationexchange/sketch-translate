@@ -12,6 +12,10 @@
 		<data>
 		UNlwA5BgQf1NGv/5iQLKuTHL8oo=
 		</data>
+		<key>Resources/GPProjectsWindowController.nib</key>
+		<data>
+		QgwKuUid1UbunJbfYq3kekWA/mw=
+		</data>
 		<key>Resources/SAMKeychain.bundle/en.lproj/SAMKeychain.strings</key>
 		<dict>
 			<key>hash</key>
@@ -44,6 +48,13 @@
 			<key>hash2</key>
 			<data>
 			cBJwdqNhfTJ2NzoVDuybVvwjCOz/7i0lXGM3pBor/Q4=
+			</data>
+		</dict>
+		<key>Resources/GPProjectsWindowController.nib</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zjLEzjpQn0DXgntg04JEHoj0glXaMP3ZndCRp8YvucI=
 			</data>
 		</dict>
 		<key>Resources/SAMKeychain.bundle/en.lproj/SAMKeychain.strings</key>

@@ -20,16 +20,16 @@
 
 @implementation GPAuthorizationWindowController
 
-- (instancetype)initWithConfiguration:(TMLConfiguration *)configuration {
+- (instancetype)init {
     if (self = [super init]) {
-        self.configuration = configuration;
-        self.apiClient = [[TMLAPIClient alloc] initWithBaseURL:configuration.apiBaseURL applicationKey:configuration.applicationKey accessToken:configuration.accessToken];
+        self.configuration = [TML sharedInstance].configuration;
+        self.apiClient = [[TMLAPIClient alloc] initWithBaseURL:self.configuration.apiBaseURL applicationKey:self.configuration.applicationKey accessToken:self.configuration.accessToken];
         
-        NSURL *url = [configuration.gatewayBaseURL copy];
+        NSURL *url = [self.configuration.gatewayBaseURL copy];
         NSURLComponents *components = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:NO];
         self.authorizationURL = components.URL;
         
-        url = [configuration.gatewayBaseURL URLByAppendingPathComponent:@"logout"];
+        url = [self.configuration.gatewayBaseURL URLByAppendingPathComponent:@"logout"];
         components = [NSURLComponents componentsWithURL:url resolvingAgainstBaseURL:NO];
         self.deauthorizationURL = components.URL;
     }

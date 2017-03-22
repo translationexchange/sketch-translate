@@ -13,6 +13,8 @@
 		AB8D28801E6EB8150021D258 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB8D287F1E6EB8150021D258 /* Cocoa.framework */; };
 		AB8D28861E712DF40021D258 /* GPExportOptionsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8D28841E712DF40021D258 /* GPExportOptionsWindowController.m */; };
 		AB8D28871E712DF40021D258 /* GPExportOptionsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AB8D28851E712DF40021D258 /* GPExportOptionsWindowController.xib */; };
+		ABA5DF881E82D8AF007A278A /* GPProjectsWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = ABA5DF861E82D8AF007A278A /* GPProjectsWindowController.m */; };
+		ABA5DF891E82D8AF007A278A /* GPProjectsWindowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ABA5DF871E82D8AF007A278A /* GPProjectsWindowController.xib */; };
 		ABACF3891E826AEF000CF29E /* GPStandardImportService.m in Sources */ = {isa = PBXBuildFile; fileRef = ABACF3881E826AEF000CF29E /* GPStandardImportService.m */; };
 		ABACF38C1E826B26000CF29E /* GPTranslationExchangeImportService.m in Sources */ = {isa = PBXBuildFile; fileRef = ABACF38B1E826B26000CF29E /* GPTranslationExchangeImportService.m */; };
 		ABACF3921E826B7E000CF29E /* GPStandardExportService.m in Sources */ = {isa = PBXBuildFile; fileRef = ABACF3911E826B7E000CF29E /* GPStandardExportService.m */; };
@@ -51,6 +53,9 @@
 		AB8D28831E712DF40021D258 /* GPExportOptionsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPExportOptionsWindowController.h; sourceTree = "<group>"; };
 		AB8D28841E712DF40021D258 /* GPExportOptionsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPExportOptionsWindowController.m; sourceTree = "<group>"; };
 		AB8D28851E712DF40021D258 /* GPExportOptionsWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPExportOptionsWindowController.xib; sourceTree = "<group>"; };
+		ABA5DF851E82D8AF007A278A /* GPProjectsWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPProjectsWindowController.h; sourceTree = "<group>"; };
+		ABA5DF861E82D8AF007A278A /* GPProjectsWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPProjectsWindowController.m; sourceTree = "<group>"; };
+		ABA5DF871E82D8AF007A278A /* GPProjectsWindowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GPProjectsWindowController.xib; sourceTree = "<group>"; };
 		ABACF37F1E8269F0000CF29E /* GPService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPService.h; sourceTree = "<group>"; };
 		ABACF3871E826AEF000CF29E /* GPStandardImportService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPStandardImportService.h; sourceTree = "<group>"; };
 		ABACF3881E826AEF000CF29E /* GPStandardImportService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPStandardImportService.m; sourceTree = "<group>"; };
@@ -148,6 +153,9 @@
 				AB8D28851E712DF40021D258 /* GPExportOptionsWindowController.xib */,
 				ABF365F01E8103EF00238FEC /* GPAuthorizationWindowController.h */,
 				ABF365F11E8103EF00238FEC /* GPAuthorizationWindowController.m */,
+				ABA5DF851E82D8AF007A278A /* GPProjectsWindowController.h */,
+				ABA5DF861E82D8AF007A278A /* GPProjectsWindowController.m */,
+				ABA5DF871E82D8AF007A278A /* GPProjectsWindowController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -288,6 +296,7 @@
 			files = (
 				AB8D287A1E6EB7020021D258 /* GPLanguagesWindowController.xib in Resources */,
 				AB8D28871E712DF40021D258 /* GPExportOptionsWindowController.xib in Resources */,
+				ABA5DF891E82D8AF007A278A /* GPProjectsWindowController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +340,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABA5DF881E82D8AF007A278A /* GPProjectsWindowController.m in Sources */,
 				ABACF3891E826AEF000CF29E /* GPStandardImportService.m in Sources */,
 				ABACF3971E826C92000CF29E /* GPService.m in Sources */,
 				ABF365F21E8103EF00238FEC /* GPAuthorizationWindowController.m in Sources */,
