@@ -7,6 +7,7 @@
 //
 
 #import <TMLKit/TMLKit.h>
+#import <TMLAuthorizationWindowController.h>
 
 @protocol GPAuthorizationWindowControllerDelegate;
 

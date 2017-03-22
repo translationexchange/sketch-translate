@@ -7,7 +7,6 @@
 //
 
 #import "GPAuthorizationWindowController.h"
-#import <TMLAuthorizationWindowController.h>
 #import <TMLAuthorizationController.h>
 
 @interface GPAuthorizationWindowController ()

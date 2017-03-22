@@ -14,6 +14,7 @@
 #import "GPTranslationExchangeExportService.h"
 
 static NSDictionary *_context;
+static GPService *_currentService;
 
 @implementation GPSketch
 
@@ -22,13 +23,13 @@ static NSDictionary *_context;
 }
 
 + (void)presentImport {
-    GPService *service = [[GPStandardImportService alloc] initWithContext:_context];
-    [service run];
+    _currentService = [[GPStandardImportService alloc] initWithContext:_context];
+    [_currentService run];
 }
 
 + (void)presentExport {
-    GPService *service = [[GPStandardExportService alloc] initWithContext:_context];
-    [service run];
+    _currentService = [[GPTranslationExchangeExportService alloc] initWithContext:_context];
+    [_currentService run];
 }
 
 @end
