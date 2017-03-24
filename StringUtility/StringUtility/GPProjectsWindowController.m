@@ -8,11 +8,9 @@
 
 #import "GPProjectsWindowController.h"
 
-#import <TMLKit.h>
-
 @interface GPProjectsWindowController ()
 
-@property (weak) IBOutlet NSComboBox *projectsComboBox;
+@property (weak) IBOutlet NSPopUpButton *popUpButton;
 
 @property (strong, nonatomic) NSArray *projects;
 
@@ -34,10 +32,10 @@
     [[TML sharedInstance].apiClient getProjects:^(NSArray *projects, TMLAPIResponse *response, NSError *error) {
         self.projects = projects;
         
-        [self.projectsComboBox removeAllItems];
+        [self.popUpButton removeAllItems];
         
         for (TMLApplication *project in self.projects) {
-            [self.projectsComboBox addItemWithObjectValue:project.name];
+            [self.popUpButton addItemWithTitle:project.name];
         }
     }];
 }
@@ -47,9 +45,9 @@
 }
 
 - (IBAction)okButtonAction:(id)sender {
-    TMLApplication *selectedProject = self.projects[self.projectsComboBox.indexOfSelectedItem];
+    TMLApplication *selectedProject = self.projects[self.popUpButton.indexOfSelectedItem];
     
-    NSLog(@"Selected projects: %@", selectedProject.name);
+    [self.delegate projectsWindowController:self didSelectProject:selectedProject];
     
     [self close];
 }

@@ -7,7 +7,18 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import <TMLKit.h>
+
+@protocol GPProjectsWindowControllerDelegate;
 
 @interface GPProjectsWindowController : NSWindowController
+
+@property (weak, nonatomic) id<GPProjectsWindowControllerDelegate> delegate;
+
+@end
+
+@protocol GPProjectsWindowControllerDelegate <NSObject>
+
+- (void)projectsWindowController:(GPProjectsWindowController *)controller didSelectProject:(TMLApplication *)project;
 
 @end

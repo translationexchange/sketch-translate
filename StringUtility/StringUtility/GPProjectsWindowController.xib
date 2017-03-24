@@ -8,7 +8,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="GPProjectsWindowController">
             <connections>
-                <outlet property="projectsComboBox" destination="ZPB-eO-0UC" id="m3e-mm-1fB"/>
+                <outlet property="popUpButton" destination="fZZ-RJ-DZ1" id="PUA-MS-E2n"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
         </customObject>
@@ -56,25 +56,25 @@ Gw
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <comboBox verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZPB-eO-0UC">
-                        <rect key="frame" x="21" y="57" width="262" height="26"/>
-                        <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="aGm-kN-YCr">
-                            <font key="font" metaFont="system"/>
-                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                        </comboBoxCell>
-                    </comboBox>
+                    <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="fZZ-RJ-DZ1">
+                        <rect key="frame" x="18" y="60" width="265" height="26"/>
+                        <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="71f-x1-8iV">
+                            <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="menu"/>
+                            <menu key="menu" id="YDJ-Eo-3ji"/>
+                        </popUpButtonCell>
+                    </popUpButton>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="ZPB-eO-0UC" secondAttribute="trailing" constant="20" id="5Rc-1w-he3"/>
+                    <constraint firstAttribute="trailing" secondItem="fZZ-RJ-DZ1" secondAttribute="trailing" constant="20" id="0ej-nu-nw1"/>
                     <constraint firstItem="8ww-GC-cSQ" firstAttribute="leading" secondItem="ENO-uB-dwV" secondAttribute="trailing" constant="12" id="6LC-aR-cNG"/>
-                    <constraint firstItem="ZPB-eO-0UC" firstAttribute="top" secondItem="vvp-ZN-dQd" secondAttribute="bottom" constant="11" id="Esl-bi-guA"/>
                     <constraint firstAttribute="bottom" secondItem="8ww-GC-cSQ" secondAttribute="bottom" constant="20" id="KBY-sk-HyR"/>
                     <constraint firstAttribute="trailing" secondItem="8ww-GC-cSQ" secondAttribute="trailing" constant="20" id="Kc1-zB-Atb"/>
                     <constraint firstItem="vvp-ZN-dQd" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="SKl-Bc-fjN"/>
                     <constraint firstItem="vvp-ZN-dQd" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="SaK-h8-VvZ"/>
                     <constraint firstAttribute="bottom" secondItem="ENO-uB-dwV" secondAttribute="bottom" constant="20" id="Zmi-kO-e0b"/>
-                    <constraint firstItem="ZPB-eO-0UC" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="21" id="xOd-2U-3d1"/>
+                    <constraint firstItem="fZZ-RJ-DZ1" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="cx9-ec-8yd"/>
+                    <constraint firstItem="fZZ-RJ-DZ1" firstAttribute="top" secondItem="vvp-ZN-dQd" secondAttribute="bottom" constant="8" id="xEh-rs-tQb"/>
                 </constraints>
             </view>
             <connections>
