@@ -7,17 +7,43 @@
     "commands" : [
     {
       "script" : "stringutility.js",
-      "handler" : "presentExport",
+      "handler" : "presentStandardExport",
       "shortcut" : "cmd ctrl e",
       "name" : "Export...",
-      "identifier" : "export"
+      "identifier" : "export-standard"
     },
     {
       "script" : "stringutility.js",
-      "handler" : "presentImport",
+      "handler" : "presentStandardImport",
       "shortcut" : "cmd ctrl i",
       "name" : "Import...",
-      "identifier" : "import"
+      "identifier" : "import-standard"
+    },
+    {
+      "script" : "stringutility.js",
+      "handler" : "presentTranslationExchangeExport",
+      "shortcut" : "",
+      "name" : "Export (Translation Exchange)...",
+      "identifier" : "export-translationexchange"
+    },
+    {
+      "script" : "stringutility.js",
+      "handler" : "presentTranslationExchangeImport",
+      "shortcut" : "",
+      "name" : "Import (Translation Exchange)...",
+      "identifier" : "import-translationexchange"
     }
-  ]
+  ],
+  "menu" : {
+    "title" : "String Utility",
+    "isRoot" : false,
+    "items" : [
+      "export-standard",
+      "import-standard",
+      "-",
+      "export-translationexchange",
+      "import-translationexchange",
+      "-",
+     ],
+  },
 }

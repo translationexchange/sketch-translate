@@ -14,6 +14,10 @@
 @property (strong, nonatomic) MSSymbolInstance *symbolInstance;
 @property (strong, nonatomic) MSTextLayer *layer;
 @property (copy, nonatomic) NSString *text;
+@property (nonatomic, readonly) NSString *identifier;
+@property (nonatomic, readonly) double lineHeight;
+@property (nonatomic, readonly) NSInteger maxCharCount;
+@property (nonatomic, readonly) NSInteger maxLineCount;
 
 - (NSMutableDictionary *)dictionaryRepresentation;
 

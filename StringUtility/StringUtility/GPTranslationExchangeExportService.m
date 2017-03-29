@@ -25,8 +25,10 @@
 }
 
 - (void)run {
-    TMLConfiguration *configuration = [[TMLConfiguration alloc] init];
-    [TML sharedInstanceWithConfiguration:configuration];
+    if (TMLSharedConfiguration() == nil) {
+        TMLConfiguration *configuration = [[TMLConfiguration alloc] init];
+        [TML sharedInstanceWithConfiguration:configuration];
+    }
     
     [self acquireAccessToken];
     
@@ -140,7 +142,17 @@
     }
     
     for (GPOverridedLayerInfo *info in layerInfos) {
-        TMLLocalizedString(info.text);
+        TMLTranslationKey *translationKey = [[TMLTranslationKey alloc] init];
+        translationKey.label = info.text;
+        translationKey.key = info.identifier;
+        translationKey.locale = TMLDefaultLocale();
+        
+        TMLSource *source = [[TMLSource alloc] init];
+        source.key = info.layer.parentPage.name;
+        
+        if (![[TML sharedInstance] isTranslationKeyRegistered:translationKey.key]) {
+            [[TML sharedInstance] registerMissingTranslationKey:translationKey forSourceKey:source.key];
+        }
     }
 }
 

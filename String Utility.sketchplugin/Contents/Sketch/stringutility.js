@@ -10,12 +10,22 @@ function loadBundleIfRequired(context) {
     } catch (e) {}
 }
 
-function presentExport(context) {
+function presentStandardExport(context) {
   loadBundleIfRequired(context);
-  [GPSketch presentExport];
+  [GPSketch presentStandardExport];
 }
 
-function presentImport(context) {
+function presentStandardImport(context) {
   loadBundleIfRequired(context);
-  [GPSketch presentImport];
+  [GPSketch presentStandardImport];
+}
+
+function presentTranslationExchangeExport(context) {
+  loadBundleIfRequired(context);
+  [GPSketch presentTranslationExchangeExport];
+}
+
+function presentTranslationExchangeImport(context) {
+  loadBundleIfRequired(context);
+  [GPSketch presentTranslationExchangeImport];
 }

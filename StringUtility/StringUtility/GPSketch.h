@@ -11,7 +11,10 @@
 @interface GPSketch : NSObject
 
 + (void)setPluginContextDictionary:(NSDictionary *)context;
-+ (void)presentExport;
-+ (void)presentImport;
+
++ (void)presentStandardImport;
++ (void)presentStandardExport;
++ (void)presentTranslationExchangeImport;
++ (void)presentTranslationExchangeExport;
 
 @end

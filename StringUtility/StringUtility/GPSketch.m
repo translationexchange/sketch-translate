@@ -22,12 +22,22 @@ static GPService *_currentService;
     _context = [context copy];
 }
 
-+ (void)presentImport {
++ (void)presentStandardImport {
     _currentService = [[GPStandardImportService alloc] initWithContext:_context];
     [_currentService run];
 }
 
-+ (void)presentExport {
++ (void)presentStandardExport {
+    _currentService = [[GPStandardExportService alloc] initWithContext:_context];
+    [_currentService run];
+}
+
++ (void)presentTranslationExchangeImport {
+    _currentService = [[GPTranslationExchangeImportService alloc] initWithContext:_context];
+    [_currentService run];
+}
+
++ (void)presentTranslationExchangeExport {
     _currentService = [[GPTranslationExchangeExportService alloc] initWithContext:_context];
     [_currentService run];
 }

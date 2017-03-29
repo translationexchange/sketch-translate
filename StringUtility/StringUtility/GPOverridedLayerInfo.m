@@ -18,29 +18,8 @@
 - (NSMutableDictionary *)dictionaryRepresentation {
     NSMutableDictionary *dictionary = [@{} mutableCopy];
     
-    NSMutableArray *identifierComponents = [@[] mutableCopy];
-    
-    [identifierComponents addObject:self.symbolInstance.name];
-    [identifierComponents addObject:self.layer.name];
-    [identifierComponents addObject:[self.text substringToIndex:2]];
-    [identifierComponents addObject:[NSString stringWithFormat:@"%li", self.text.length]];
-    [identifierComponents addObject:[self.text substringFromIndex:self.text.length - 2]];
-    
-    NSString *sampleString = @"x";
-    NSSize sampleSize = [sampleString sizeWithAttributes:@{NSFontAttributeName: self.layer.font}];
-    
-    double lineHeight = self.layer.lineHeight;
-    
-    if (lineHeight == 0.0) {
-        lineHeight = [self.layer defaultLineHeight:[self.layer createLayoutManager]];
-    }
-    
-    NSInteger maxCharCount = (NSInteger)floorf((self.layer.rect.size.width * self.layer.rect.size.height) / (sampleSize.width * lineHeight));
-    
-    NSInteger maxLineCount = (NSInteger)floorf(self.layer.rect.size.height / lineHeight);
-    
     dictionary[@"seq_num"] = @0;
-    dictionary[@"identifier"] = [identifierComponents componentsJoinedByString:@"-"];
+    dictionary[@"identifier"] = self.identifier;
     
     NSMutableDictionary *infoDict = [@{} mutableCopy];
     infoDict[@"english"] = self.text;
@@ -69,11 +48,11 @@
     }
     
     if ([GPPluginConfiguration sharedConfiguration].isMaxCharacterCountEnabled) {
-        noteDict[@"maxChar"] = @(maxCharCount);
+        noteDict[@"maxChar"] = @(self.maxCharCount);
     }
     
     if ([GPPluginConfiguration sharedConfiguration].isMaxLineCountEnabled) {
-        noteDict[@"maxLine"] = @(maxLineCount);
+        noteDict[@"maxLine"] = @(self.maxLineCount);
     }
     
     if ([GPPluginConfiguration sharedConfiguration].isTextFieldDimensionsEnabled) {
@@ -87,6 +66,39 @@
     dictionary[@"note"] = noteDict;
     
     return dictionary;
+}
+
+- (NSString *)identifier {
+    NSMutableArray *identifierComponents = [@[] mutableCopy];
+    
+    [identifierComponents addObject:self.symbolInstance.name];
+    [identifierComponents addObject:self.layer.name];
+    [identifierComponents addObject:[self.text substringToIndex:2]];
+    [identifierComponents addObject:[NSString stringWithFormat:@"%li", self.text.length]];
+    [identifierComponents addObject:[self.text substringFromIndex:self.text.length - 2]];
+    
+    return [identifierComponents componentsJoinedByString:@"-"];
+}
+
+- (double)lineHeight {
+    double lineHeight = self.layer.lineHeight;
+    
+    if (lineHeight == 0.0) {
+        lineHeight = [self.layer defaultLineHeight:[self.layer createLayoutManager]];
+    }
+    
+    return lineHeight;
+}
+
+- (NSInteger)maxCharCount {
+    NSString *sampleString = @"x";
+    NSSize sampleSize = [sampleString sizeWithAttributes:@{NSFontAttributeName: self.layer.font}];
+    
+    return (NSInteger)floorf((self.layer.rect.size.width * self.layer.rect.size.height) / (sampleSize.width * self.lineHeight));
+}
+
+- (NSInteger)maxLineCount {
+    return (NSInteger)floorf(self.layer.rect.size.height / self.lineHeight);
 }
 
 @end
