@@ -15,6 +15,8 @@
 @property (weak) IBOutlet NSTableView *tableView;
 @property (strong) NSMutableArray *selectedLocaleIdentifiers;
 @property (strong) NSArray *languages;
+@property (strong) NSArray *filteredLanguages;
+@property (weak) IBOutlet NSSearchField *searchField;
 
 @end
 
@@ -46,6 +48,7 @@
     [temp sortUsingDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"displayName" ascending:YES]]];
     
     self.languages = temp;
+    self.filteredLanguages = self.languages;
     
     [self.tableView reloadData];
 }
@@ -67,8 +70,20 @@
     [self.window.sheetParent endSheet:self.window returnCode:NSModalResponseOK];
 }
 
+- (IBAction)searchFieldDidChangeValue:(id)sender {
+    NSString *searchText = self.searchField.stringValue;
+    
+    if ([searchText length] > 0) {
+        self.filteredLanguages = [self.languages filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"displayName CONTAINS[cd] %@", searchText]];
+    } else {
+        self.filteredLanguages = self.languages;
+    }
+    
+    [self.tableView reloadData];
+}
+
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return [self.languages count];
+    return [self.filteredLanguages count];
 }
 
 - (id)tableView:(NSTableView *)tableView objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
@@ -80,8 +95,8 @@
 - (NSCell *)tableView:(NSTableView *)tableView dataCellForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NSButtonCell *buttonCell = [tableColumn dataCell];
     
-    [buttonCell setState:[self.selectedLocaleIdentifiers containsObject:self.languages[row][@"localeIdentifier"]]];
-    [buttonCell setTitle:self.languages[row][@"displayName"]];
+    [buttonCell setState:[self.selectedLocaleIdentifiers containsObject:self.filteredLanguages[row][@"localeIdentifier"]]];
+    [buttonCell setTitle:self.filteredLanguages[row][@"displayName"]];
     
     return buttonCell;
 }
@@ -89,7 +104,7 @@
 - (void)tableView:(NSTableView *)tableView setObjectValue:(id)object forTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NSNumber *newValue = object;
     
-    NSDictionary *language = self.languages[row];
+    NSDictionary *language = self.filteredLanguages[row];
     
     if ([newValue boolValue]) {
         [self.selectedLocaleIdentifiers addObject:language[@"localeIdentifier"]];

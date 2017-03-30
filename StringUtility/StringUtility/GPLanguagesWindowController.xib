@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12118"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="GPLanguagesWindowController">
             <connections>
+                <outlet property="searchField" destination="cdE-ly-ay8" id="YIk-0y-dFZ"/>
                 <outlet property="tableView" destination="7AS-4h-jbF" id="Zuq-6j-1ug"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
@@ -104,8 +105,19 @@ Gw
                             <action selector="cancelButtonAction:" target="-2" id="xwE-XE-r07"/>
                         </connections>
                     </button>
+                    <searchField wantsLayer="YES" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdE-ly-ay8">
+                        <rect key="frame" x="20" y="19" width="143" height="22"/>
+                        <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="oK1-Q2-gSY">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                        </searchFieldCell>
+                        <connections>
+                            <action selector="searchFieldDidChangeValue:" target="-2" id="S8y-Cn-Fic"/>
+                        </connections>
+                    </searchField>
                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FjL-7p-E02">
-                        <rect key="frame" x="14" y="13" width="75" height="32"/>
+                        <rect key="frame" x="169" y="13" width="75" height="32"/>
                         <buttonCell key="cell" type="push" title="Reset" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="L7k-Sw-t4F">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
@@ -122,11 +134,14 @@ Gw
                     <constraint firstItem="wPQ-lS-sP5" firstAttribute="leading" secondItem="EeC-ix-gvv" secondAttribute="trailing" constant="12" id="61n-E3-dh4"/>
                     <constraint firstItem="406-B2-nAh" firstAttribute="top" secondItem="REg-hk-UlC" secondAttribute="bottom" constant="8" id="7YS-A8-PkZ"/>
                     <constraint firstAttribute="bottom" secondItem="wPQ-lS-sP5" secondAttribute="bottom" constant="20" id="7tP-EQ-AUq"/>
+                    <constraint firstAttribute="bottom" secondItem="cdE-ly-ay8" secondAttribute="bottom" constant="19" id="Icy-Sd-zDe"/>
                     <constraint firstItem="REg-hk-UlC" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="Mww-2b-1nb"/>
                     <constraint firstItem="406-B2-nAh" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="OrT-Kk-Tbp"/>
-                    <constraint firstItem="FjL-7p-E02" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="PiL-nX-fHJ"/>
                     <constraint firstItem="REg-hk-UlC" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="TZy-d7-jRS"/>
+                    <constraint firstItem="EeC-ix-gvv" firstAttribute="leading" secondItem="FjL-7p-E02" secondAttribute="trailing" constant="12" id="X3W-Ei-ioo"/>
+                    <constraint firstItem="cdE-ly-ay8" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" constant="20" id="XT4-ON-S4w"/>
                     <constraint firstAttribute="bottom" secondItem="FjL-7p-E02" secondAttribute="bottom" constant="20" id="Y5E-6j-EU9"/>
+                    <constraint firstItem="FjL-7p-E02" firstAttribute="leading" secondItem="cdE-ly-ay8" secondAttribute="trailing" constant="12" id="ZpC-wu-30I"/>
                     <constraint firstAttribute="trailing" secondItem="406-B2-nAh" secondAttribute="trailing" constant="20" id="e8z-re-EGP"/>
                     <constraint firstAttribute="trailing" secondItem="wPQ-lS-sP5" secondAttribute="trailing" constant="20" id="pqi-jw-nbd"/>
                     <constraint firstItem="wPQ-lS-sP5" firstAttribute="top" secondItem="406-B2-nAh" secondAttribute="bottom" constant="20" id="sa9-qu-kQh"/>
@@ -136,7 +151,7 @@ Gw
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="327.5" y="156"/>
+            <point key="canvasLocation" x="327" y="156"/>
         </window>
     </objects>
 </document>

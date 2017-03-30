@@ -10,8 +10,16 @@
 
 #import "GPPluginConfiguration.h"
 
-#import "MSPage.h"
-#import "MSArtboardGroup.h"
+#import "MSKit.h"
+
+NSString * const GPSketchBundleName = @"com.gopro.sketch.stringutility";
+NSString * const GPSketchLastExportOverridesKey = @"GPSketchLastExportOverridesKey";
+
+@interface GPOverridedLayerInfo ()
+
+@property (readonly, nonatomic) NSMutableDictionary *pluginUserInfo;
+
+@end
 
 @implementation GPOverridedLayerInfo
 
@@ -31,6 +39,11 @@
     dictionary[@"info"] = infoDict;
     
     NSMutableDictionary *noteDict = [@{} mutableCopy];
+    
+    NSString *currentTextOverride = self.symbolInstance.overrides[@0][self.layer.objectID];
+    NSString *previousTextOverride = self.lastExportOverrides[@0][self.layer.objectID];
+    
+    noteDict[@"updated"] = @(![currentTextOverride isEqualToString:previousTextOverride]);
     
     noteDict[@"pageName"] = self.symbolInstance.parentPage.name;
     noteDict[@"artboardName"] = self.symbolInstance.parentArtboard.name;
@@ -99,6 +112,32 @@
 
 - (NSInteger)maxLineCount {
     return (NSInteger)floorf(self.layer.rect.size.height / self.lineHeight);
+}
+
+- (NSMutableDictionary *)pluginUserInfo {
+    NSMutableDictionary *pluginUserInfo = [self.symbolInstance.userInfo[GPSketchBundleName] mutableCopy];
+    
+    if (!pluginUserInfo) {
+        pluginUserInfo = [@{} mutableCopy];
+    }
+    
+    return pluginUserInfo;
+}
+
+- (NSDictionary *)lastExportOverrides {
+    return self.pluginUserInfo[GPSketchLastExportOverridesKey];
+}
+
+- (void)setLastExportOverrides:(NSDictionary *)lastExportOverrides {
+    NSMutableDictionary *pluginUserInfo = self.pluginUserInfo;
+    
+    pluginUserInfo[GPSketchLastExportOverridesKey] = lastExportOverrides;
+    
+    NSMutableDictionary *mutableUserInfo = [self.symbolInstance.userInfo mutableCopy];
+    
+    mutableUserInfo[GPSketchBundleName] = pluginUserInfo;
+    
+    self.symbolInstance.userInfo = mutableUserInfo;
 }
 
 @end

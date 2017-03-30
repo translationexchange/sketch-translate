@@ -100,6 +100,10 @@
         [stringInfos addObject:dictionary];
     }
     
+    for (GPOverridedLayerInfo *info in layerInfos) {
+        info.lastExportOverrides = info.symbolInstance.overrides;
+    }
+    
     NSSavePanel *savePanel = [NSSavePanel savePanel];
     savePanel.allowedFileTypes = @[@"json"];
     savePanel.directoryURL = [NSURL fileURLWithPath:@"~/Documents/"];

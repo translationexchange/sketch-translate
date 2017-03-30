@@ -18,6 +18,7 @@
 @property (nonatomic, readonly) double lineHeight;
 @property (nonatomic, readonly) NSInteger maxCharCount;
 @property (nonatomic, readonly) NSInteger maxLineCount;
+@property (readwrite, nonatomic) NSDictionary *lastExportOverrides;
 
 - (NSMutableDictionary *)dictionaryRepresentation;
 

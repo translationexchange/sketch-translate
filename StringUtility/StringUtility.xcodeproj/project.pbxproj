@@ -80,7 +80,6 @@
 		ABF2D73C1E71A5EC0086E57F /* MSTextLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSTextLayer.h; sourceTree = "<group>"; };
 		ABF2D73D1E71A9710086E57F /* MSSymbolInstance.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSSymbolInstance.h; sourceTree = "<group>"; };
 		ABF2D73E1E71AA8D0086E57F /* MSSymbolMaster.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MSSymbolMaster.h; sourceTree = "<group>"; };
-		ABF2D73F1E71AE720086E57F /* Sketch.app */ = {isa = PBXFileReference; lastKnownFileType = wrapper.application; name = Sketch.app; path = ../../../../../Applications/Sketch.app; sourceTree = "<group>"; };
 		ABF2D7431E71B0690086E57F /* GPOverridedLayerInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPOverridedLayerInfo.h; sourceTree = "<group>"; };
 		ABF2D7441E71B0690086E57F /* GPOverridedLayerInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GPOverridedLayerInfo.m; sourceTree = "<group>"; };
 		ABF365F01E8103EF00238FEC /* GPAuthorizationWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GPAuthorizationWindowController.h; sourceTree = "<group>"; };
@@ -163,7 +162,6 @@
 		AB8D287E1E6EB8150021D258 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ABF2D73F1E71AE720086E57F /* Sketch.app */,
 				AB8D287F1E6EB8150021D258 /* Cocoa.framework */,
 				E017E36AEF108890D779C1D4 /* libPods-StringUtility.a */,
 			);

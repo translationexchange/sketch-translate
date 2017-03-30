@@ -16,6 +16,7 @@
 @property(nonatomic) CGPoint origin;
 @property(nonatomic) CGRect rect;
 @property(copy, nonatomic) NSString *name;
+@property(copy, nonatomic) NSDictionary *userInfo;
 
 - (MSPage *)parentPage;
 - (MSArtboardGroup *)parentArtboard;
