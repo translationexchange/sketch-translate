@@ -40,6 +40,8 @@
     "items" : [
       "export-standard",
       "import-standard",
+      "export-translationexchange",
+      "import-translationexchange",
      ],
   },
 }

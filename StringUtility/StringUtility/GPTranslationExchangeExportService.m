@@ -30,13 +30,11 @@
         [TML sharedInstanceWithConfiguration:configuration];
     }
     
-    [self acquireAccessToken];
-    
-//    if ([TML sharedInstance].configuration.accessToken.length == 0) {
-//        [self acquireAccessToken];
-//    } else {
-//        [self showProjects];
-//    }
+    if ([TML sharedInstance].configuration.accessToken.length == 0) {
+        [self acquireAccessToken];
+    } else {
+        [self showProjects];
+    }
 }
 
 - (void)acquireAccessToken {
