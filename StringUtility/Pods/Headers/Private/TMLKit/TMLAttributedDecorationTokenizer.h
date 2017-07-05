@@ -1,1 +1,1 @@
-../../../../../../tml-objc/Classes/Tokenizers/TMLAttributedDecorationTokenizer.h
+../../../TMLKit/Classes/Tokenizers/TMLAttributedDecorationTokenizer.h

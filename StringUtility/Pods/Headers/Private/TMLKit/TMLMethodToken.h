@@ -1,1 +1,1 @@
-../../../../../../tml-objc/Classes/Tokens/TMLMethodToken.h
+../../../TMLKit/Classes/Tokens/TMLMethodToken.h

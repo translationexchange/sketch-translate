@@ -1,1 +1,1 @@
-../../../../../../tml-objc/Classes/TML+NSLocalizedString.h
+../../../TMLKit/Classes/TML+NSLocalizedString.h

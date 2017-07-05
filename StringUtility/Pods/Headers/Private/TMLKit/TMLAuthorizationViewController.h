@@ -1,1 +1,1 @@
-../../../../../../tml-objc/Classes/Controllers/TMLAuthorizationViewController.h
+../../../TMLKit/Classes/Controllers/TMLAuthorizationViewController.h

@@ -1,1 +1,1 @@
-../../../../../../tml-objc/Classes/Controllers/TMLTranslatorViewController.h
+../../../TMLKit/Classes/Controllers/TMLTranslatorViewController.h

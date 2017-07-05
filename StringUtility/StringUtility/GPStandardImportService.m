@@ -43,9 +43,7 @@
                     
                     if (info) {
                         NSMutableDictionary *mutableOverrides = [info.symbolInstance.overrides mutableCopy];
-                        NSMutableDictionary *mutableValuesDict = [mutableOverrides[@0] mutableCopy];
-                        mutableValuesDict[info.layer.objectID] = text;
-                        mutableOverrides[@0] = mutableValuesDict;
+                        mutableOverrides[info.layer.objectID] = text;
                         
                         info.symbolInstance.overrides = mutableOverrides;
                     }
@@ -115,7 +113,7 @@
             for (MSLayer *layer in masterChildren) {
                 if ([layer.className isEqualToString:@"MSTextLayer"] && [layer.name isEqualToString:layerName]) {
                     MSTextLayer *textLayer = (MSTextLayer *)layer;
-                    NSString *textOverride = overrides[@0][layer.objectID];
+                    NSString *textOverride = overrides[layer.objectID];
                     
                     if ([textOverride hasPrefix:first2Characters] && ([textOverride length] == textLength) && [textOverride hasSuffix:last2Characters]) {
                         GPOverridedLayerInfo *info = [[GPOverridedLayerInfo alloc] init];

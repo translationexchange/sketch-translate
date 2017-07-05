@@ -1,1 +1,1 @@
-../../../../../../tml-objc/Classes/TMLTranslationActivationView.h
+../../../TMLKit/Classes/TMLTranslationActivationView.h

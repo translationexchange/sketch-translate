@@ -77,7 +77,7 @@
             
             for (MSLayer *layer in masterChildren) {
                 if (overrides && [layer.className isEqualToString:@"MSTextLayer"] && [layer.name hasPrefix:@"*"] && [layer.name hasSuffix:@"_"]) {
-                    NSString *textOverride = overrides[@0][layer.objectID];
+                    NSString *textOverride = overrides[layer.objectID];
                     
                     if (textOverride) {
                         GPOverridedLayerInfo *info = [[GPOverridedLayerInfo alloc] init];

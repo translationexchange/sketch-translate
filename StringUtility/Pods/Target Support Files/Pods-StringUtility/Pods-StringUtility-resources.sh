@@ -78,13 +78,13 @@ EOM
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "SAMKeychain/Support/SAMKeychain.bundle"
-  install_resource "../../../tml-objc/Assets/en-US.json"
-  install_resource "../../../tml-objc/Assets/en.json"
+  install_resource "TMLKit/Assets/en-US.json"
+  install_resource "TMLKit/Assets/en.json"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "SAMKeychain/Support/SAMKeychain.bundle"
-  install_resource "../../../tml-objc/Assets/en-US.json"
-  install_resource "../../../tml-objc/Assets/en.json"
+  install_resource "TMLKit/Assets/en-US.json"
+  install_resource "TMLKit/Assets/en.json"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

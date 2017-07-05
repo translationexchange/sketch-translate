@@ -3,5 +3,5 @@ platform :osx, '10.11'
 
 target 'StringUtility' do
   pod 'NVHTarGzip', :git => 'https://github.com/konkab/NVHTarGzip'
-  pod 'TMLKit', :path => '/Users/konstantinkabanov/Repositories/tml-objc'
+  pod 'TMLKit', :git => 'https://github.com/konkab/tml-objc'
 end

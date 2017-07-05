@@ -1,1 +1,1 @@
-../../../../../../tml-objc/Classes/Extensions/UISegmentedControl+TML.h
+../../../TMLKit/Classes/Extensions/UISegmentedControl+TML.h

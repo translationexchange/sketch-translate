@@ -1,1 +1,1 @@
-../../../../../../tml-objc/Classes/Tokens/TMLPipedToken.h
+../../../TMLKit/Classes/Tokens/TMLPipedToken.h

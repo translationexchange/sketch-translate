@@ -1,1 +1,1 @@
-../../../../../../tml-objc/TMLKit/TMLKit/TMLPrivateConfig.h
+../../../TMLKit/TMLKit/TMLKit/TMLPrivateConfig.h

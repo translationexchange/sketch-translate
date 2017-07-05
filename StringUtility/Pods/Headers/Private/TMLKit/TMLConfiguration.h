@@ -1,1 +1,1 @@
-../../../../../../tml-objc/Classes/Application/TMLConfiguration.h
+../../../TMLKit/Classes/Application/TMLConfiguration.h

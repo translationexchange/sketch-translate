@@ -1,1 +1,1 @@
-../../../../../../tml-objc/Classes/Translations/TMLTranslationKey.h
+../../../TMLKit/Classes/Translations/TMLTranslationKey.h

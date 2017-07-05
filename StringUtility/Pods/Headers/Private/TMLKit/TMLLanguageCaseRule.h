@@ -1,1 +1,1 @@
-../../../../../../tml-objc/Classes/Language/TMLLanguageCaseRule.h
+../../../TMLKit/Classes/Language/TMLLanguageCaseRule.h

@@ -1,1 +1,1 @@
-../../../../../../tml-objc/Classes/TMLGlobals.h
+../../../TMLKit/Classes/TMLGlobals.h
