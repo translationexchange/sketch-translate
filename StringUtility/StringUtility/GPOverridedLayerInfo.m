@@ -97,7 +97,13 @@ NSString * const GPSketchLastExportOverridesKey = @"GPSketchLastExportOverridesK
     double lineHeight = self.layer.lineHeight;
     
     if (lineHeight == 0.0) {
-        lineHeight = [self.layer defaultLineHeight:[self.layer createLayoutManager]];
+        NSTextContainer *textContainer = [NSTextContainer new];
+        NSLayoutManager *layoutManager = [NSLayoutManager new];
+        NSTextStorage *textStorage = [[NSTextStorage alloc] initWithAttributedString:self.layer.attributedStringValue];
+        layoutManager.textStorage = textStorage;
+        [layoutManager addTextContainer:textContainer];
+        
+        lineHeight = [self.layer defaultLineHeight:layoutManager];
     }
     
     return lineHeight;
