@@ -28,6 +28,7 @@ NSString * const GPSketchLastExportOverridesKey = @"GPSketchLastExportOverridesK
     
     dictionary[@"seq_num"] = @0;
     dictionary[@"identifier"] = self.identifier;
+    dictionary[@"layer_id"] = self.layer.objectID;
     
     NSMutableDictionary *infoDict = [@{} mutableCopy];
     infoDict[@"english"] = self.text;
